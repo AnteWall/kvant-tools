@@ -4,7 +4,7 @@
   "description": "TypeScript SDK for Nordnet's web API",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnteWall/avanza-ts.git",
+    "url": "git+https://github.com/AnteWall/kvant-tools.git",
     "directory": "packages/nordnet-ts"
   },
   "files": [

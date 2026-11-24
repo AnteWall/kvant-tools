@@ -30,7 +30,7 @@ jobs:
           node-version: '24'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm --filter @avanza/docs build
+      - run: pnpm --filter @kvant/docs build
         env:
           NEXT_PUBLIC_DOCS_BASE_PATH: /${{ github.event.repository.name }}
       - run: touch apps/docs/out/.nojekyll

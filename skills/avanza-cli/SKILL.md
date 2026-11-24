@@ -87,4 +87,4 @@ Take account IDs from `accounts list`, not from a displayed account number; `--a
 - Most data commands read data (some use query-only POST). `instruments tabs save`, `instruments tabs delete`, and `instruments filters save` change stored settings; only run them for an explicit user request. Saving tabs or filters replaces the entire collection, and deleting tabs removes all custom tabs.
 - Do not confuse a fetched order or stop-loss with placing one. Do not manufacture missing values or give a financial recommendation as though it came from Avanza.
 
-For the complete command inventory and up-to-date examples, see [the CLI documentation](https://antewall.github.io/avanza-ts/docs/cli/) or run `avanza --help`.
+For the complete command inventory and up-to-date examples, see [the CLI documentation](https://antewall.github.io/kvant-tools/docs/cli/) or run `avanza --help`.

@@ -4,7 +4,7 @@
   "description": "TypeScript SDK for Avanza",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnteWall/avanza-ts.git",
+    "url": "git+https://github.com/AnteWall/kvant-tools.git",
     "directory": "packages/avanza-ts"
   },
   "files": [

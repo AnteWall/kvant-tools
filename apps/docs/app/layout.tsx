@@ -7,8 +7,8 @@ import { Search } from '@/components/search';
 import './global.css';
 
 export const metadata: Metadata = {
-  title: { default: 'Avanza Tools', template: '%s | Avanza Tools' },
-  description: 'Documentation for the avanza-ts SDK and avanza-tools (CLI).',
+  title: { default: 'Kvant Tools', template: '%s | Kvant Tools' },
+  description: 'Documentation for Kvant Tools: the avanza-ts SDK and avanza-tools (CLI).',
 };
 
 export default function Layout({ children }: { children: ReactNode }) {

@@ -1,5 +1,5 @@
 {
-  description = "Development environment for the Avanza TypeScript SDK and CLI";
+  description = "Development environment for Kvant Tools";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 

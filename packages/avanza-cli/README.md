@@ -7,7 +7,7 @@ Command-line interface for `avanza-ts`. Install with `npm install -g avanza-tool
 Install the [Avanza CLI skill](../../skills/avanza-cli/SKILL.md) for an AI agent to discover commands and use market or account data safely:
 
 ```sh
-npx skills add AnteWall/avanza-ts --skill avanza-cli
+npx skills add AnteWall/kvant-tools --skill avanza-cli
 ```
 
 Run this in your project, or add `--global` to use the skill across projects. Install the `avanza` CLI separately.

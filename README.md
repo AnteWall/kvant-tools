@@ -1,15 +1,15 @@
-# Avanza TypeScript & CLI
+# Kvant Tools
 
 > [!TIP]
 > <img src="https://raw.githubusercontent.com/AnteWall/avanza-desk/HEAD/src-tauri/icons/logo.svg" width="20" align="top" alt="" /> **New: [Avanza Desk](https://github.com/AnteWall/avanza-desk)** is a fast, keyboard-first trading terminal for your Avanza account, with built-in agent support. Free and open source. [Check it out →](https://github.com/AnteWall/avanza-desk)
 >
 > <a href="https://github.com/AnteWall/avanza-desk"><img src="https://raw.githubusercontent.com/AnteWall/avanza-desk/HEAD/docs/screenshots/workspace.png" width="480" alt="Avanza Desk workspace" /></a>
 
-An unofficial TypeScript SDK and command-line tool for Avanza.
+Unofficial TypeScript SDKs and command-line tools for Nordic brokers: Avanza (`avanza-ts`, `avanza-tools`) and Nordnet (`nordnet-ts`).
 
-**Documentation:** [SDK guide](https://antewall.github.io/avanza-ts/docs/sdk/) · [CLI guide](https://antewall.github.io/avanza-ts/docs/cli/) · [Full documentation](https://antewall.github.io/avanza-ts/)
+**Documentation:** [SDK guide](https://antewall.github.io/kvant-tools/docs/sdk/) · [CLI guide](https://antewall.github.io/kvant-tools/docs/cli/) · [Full documentation](https://antewall.github.io/kvant-tools/)
 
-**For AI agents:** [llms.txt](https://antewall.github.io/avanza-ts/llms.txt) · [Full Markdown docs](https://antewall.github.io/avanza-ts/llms-full.txt)
+**For AI agents:** [llms.txt](https://antewall.github.io/kvant-tools/llms.txt) · [Full Markdown docs](https://antewall.github.io/kvant-tools/llms-full.txt)
 
 Requires Node.js 22.12 or newer.
 
@@ -29,7 +29,7 @@ const results = await client.market.search('volvo');
 console.log(results);
 ```
 
-Public market requests work without signing in. See the [SDK getting-started guide](https://antewall.github.io/avanza-ts/docs/sdk/getting-started) for more.
+Public market requests work without signing in. See the [SDK getting-started guide](https://antewall.github.io/kvant-tools/docs/sdk/getting-started) for more.
 
 ## CLI — `avanza-tools`
 
@@ -45,10 +45,10 @@ On macOS or Linux, you can also install with Homebrew: `brew install AnteWall/ta
 To use the CLI with an AI agent, install the skill in your project:
 
 ```sh
-npx skills add AnteWall/avanza-ts --skill avanza-cli
+npx skills add AnteWall/kvant-tools --skill avanza-cli
 ```
 
-See the [CLI getting-started guide](https://antewall.github.io/avanza-ts/docs/cli/getting-started) for other package managers and authentication, or the [agent skill guide](https://antewall.github.io/avanza-ts/docs/cli/skills) for more.
+See the [CLI getting-started guide](https://antewall.github.io/kvant-tools/docs/cli/getting-started) for other package managers and authentication, or the [agent skill guide](https://antewall.github.io/kvant-tools/docs/cli/skills) for more.
 
 ## Disclaimer
 
@@ -75,6 +75,6 @@ Run `pnpm dev` to watch both TypeScript packages. Use `pnpm changeset` to descri
 
 The SDK and CLI have independent versions and GitHub Releases. Add a changeset for each publishable change and merge it into `main`. The [version workflow](.github/workflows/version.yml) pushes version and changelog commits to a **Version Packages** PR; merge that PR to start the [release workflow](.github/workflows/release.yml). It checks, builds, and publishes changed packages to npm, then creates `avanza-ts@<version>` and/or `avanza-tools@<version>` GitHub Releases with their changelog entries. A CLI release waits for the SDK if both versions change together. Rerun **Release packages** manually on `main` to retry a partial release; published npm versions and existing GitHub Releases are skipped.
 
-Run `pnpm --filter @avanza/docs dev` to work on the documentation locally. The docs build generates CLI topic pages from oclif help before exporting the static site. GitHub Pages deployment runs from `.github/workflows/docs.yml` (select **GitHub Actions** as the repository's Pages source).
+Run `pnpm --filter @kvant/docs dev` to work on the documentation locally. The docs build generates CLI topic pages from oclif help before exporting the static site. GitHub Pages deployment runs from `.github/workflows/docs.yml` (select **GitHub Actions** as the repository's Pages source).
 
-The docs build also generates the [SDK API reference](https://antewall.github.io/avanza-ts/docs/sdk/reference/generated/) from the `avanza-ts` public entry point using TypeDoc. Run `pnpm --filter @avanza/docs generate:sdk` to refresh it locally.
+The docs build also generates the [SDK API reference](https://antewall.github.io/kvant-tools/docs/sdk/reference/generated/) from the `avanza-ts` public entry point using TypeDoc. Run `pnpm --filter @kvant/docs generate:sdk` to refresh it locally.

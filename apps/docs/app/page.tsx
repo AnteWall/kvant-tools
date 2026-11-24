@@ -14,7 +14,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-6xl px-6 pt-24 pb-20 sm:pt-32 lg:pt-40">
           <div className="max-w-3xl">
             <h1 className="text-5xl font-semibold tracking-[-0.055em] sm:text-6xl lg:text-7xl">
-              Avanza Tools<span className="text-sky-500">.</span>
+              Kvant Tools<span className="text-sky-500">.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-fd-muted-foreground sm:text-xl">
               Build with Avanza data in TypeScript or explore it from your terminal. Pick the tool
