@@ -8,6 +8,8 @@ on:
       - packages/avanza-cli/package.json
       - packages/avanza/CHANGELOG.md
       - packages/avanza-cli/CHANGELOG.md
+      - packages/nordnet/package.json
+      - packages/nordnet/CHANGELOG.md
   workflow_dispatch:
 
 permissions:
@@ -24,19 +26,18 @@ jobs:
     outputs:
       sdk: ${{ steps.versions.outputs.sdk }}
       cli: ${{ steps.versions.outputs.cli }}
+      nordnet: ${{ steps.versions.outputs.nordnet }}
     steps:
       - uses: actions/checkout@v4
       - name: Find changed versions
         id: versions
         run: |
-          for package in avanza avanza-cli; do
+          for pair in sdk:avanza cli:avanza-cli nordnet:nordnet; do
+            output=${pair%%:*}
+            package=${pair#*:}
             current=$(jq -r .version "packages/$package/package.json")
             if node scripts/release-notes.mjs "$package" "$current" >/dev/null 2>&1; then
-              if [[ "$package" == 'avanza' ]]; then
-                echo "sdk=$current" >> "$GITHUB_OUTPUT"
-              else
-                echo "cli=$current" >> "$GITHUB_OUTPUT"
-              fi
+              echo "$output=$current" >> "$GITHUB_OUTPUT"
             fi
           done
 
@@ -123,24 +124,64 @@ jobs:
           if [[ "$(gh release view "$tag" --json assets --jq ".assets | any(.name == \"$asset\")")" != true ]]; then
             gh release upload "$tag" "$RUNNER_TEMP/$asset"
           fi
-          gh release download "$tag" --pattern "$asset" --output "$RUNNER_TEMP/avanza-tools.tgz"
+          gh release download "$tag" --pattern "$asset" --output "$RUNNER_TEMP/avanza-cli.tgz"
       - name: Update Homebrew tap
         env:
           GH_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
           VERSION: ${{ needs.versions.outputs.cli }}
         run: |
           test -n "$GH_TOKEN" || { echo 'Set HOMEBREW_TAP_TOKEN to update AnteWall/homebrew-tap'; exit 1; }
-          sha=$(shasum -a 256 "$RUNNER_TEMP/avanza-tools.tgz" | cut -d ' ' -f 1)
+          sha=$(shasum -a 256 "$RUNNER_TEMP/avanza-cli.tgz" | cut -d ' ' -f 1)
           content=$(node scripts/homebrew-formula.mjs "$VERSION" "$sha" | base64 | tr -d '\n')
-          existing=$(gh api repos/AnteWall/homebrew-tap/contents/Formula/avanza-tools.rb --jq .sha 2>/dev/null || true)
+          existing=$(gh api repos/AnteWall/homebrew-tap/contents/Formula/kvant-tools.rb --jq .sha 2>/dev/null || true)
           if [[ -n "$existing" ]]; then
-            installed=$(gh api repos/AnteWall/homebrew-tap/contents/Formula/avanza-tools.rb --jq .content | tr -d '\n')
+            installed=$(gh api repos/AnteWall/homebrew-tap/contents/Formula/kvant-tools.rb --jq .content | tr -d '\n')
             if [[ "$content" == "$installed" ]]; then
               exit 0
             fi
-            gh api repos/AnteWall/homebrew-tap/contents/Formula/avanza-tools.rb --method PUT \
-              -f "message=Update avanza-tools to $VERSION" -f "content=$content" -f "sha=$existing" >/dev/null
+            gh api repos/AnteWall/homebrew-tap/contents/Formula/kvant-tools.rb --method PUT \
+              -f "message=Update kvant-tools to $VERSION" -f "content=$content" -f "sha=$existing" >/dev/null
           else
-            gh api repos/AnteWall/homebrew-tap/contents/Formula/avanza-tools.rb --method PUT \
-              -f "message=Add avanza-tools $VERSION" -f "content=$content" >/dev/null
+            gh api repos/AnteWall/homebrew-tap/contents/Formula/kvant-tools.rb --method PUT \
+              -f "message=Add kvant-tools $VERSION" -f "content=$content" >/dev/null
+          fi
+
+  nordnet:
+    needs: versions
+    if: needs.versions.outputs.nordnet != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+      - run: npm install -g npm@^11
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - run: pnpm --filter @kvant-dev/nordnet build
+      - name: Publish Nordnet SDK
+        env:
+          VERSION: ${{ needs.versions.outputs.nordnet }}
+        run: |
+          if ! npm view "@kvant-dev/nordnet@$VERSION" version >/dev/null 2>&1; then
+            pnpm --filter @kvant-dev/nordnet pack --pack-destination "$RUNNER_TEMP"
+            npm publish "$RUNNER_TEMP/kvant-dev-nordnet-$VERSION.tgz" --access public
+          fi
+      - name: Create Nordnet SDK GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ needs.versions.outputs.nordnet }}
+        run: |
+          tag="nordnet@$VERSION"
+          if ! gh release view "$tag" >/dev/null 2>&1; then
+            node scripts/release-notes.mjs nordnet "$VERSION" > "$RUNNER_TEMP/release-notes.md"
+            gh release create "$tag" --target "$GITHUB_SHA" --title "$tag" --notes-file "$RUNNER_TEMP/release-notes.md"
           fi

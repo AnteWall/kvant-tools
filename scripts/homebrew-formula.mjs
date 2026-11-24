@@ -4,7 +4,7 @@ if (!/^\d+\.\d+\.\d+(?:-[\w.-]+)?$/.test(version ?? '') || !/^[a-f0-9]{64}$/.tes
   throw new Error('Usage: node scripts/homebrew-formula.mjs <version> <sha256>');
 }
 
-console.log(`class AvanzaTools < Formula
+console.log(`class KvantTools < Formula
   desc "Command-line interface for Avanza"
   homepage "https://github.com/AnteWall/kvant-tools"
   url "https://github.com/AnteWall/kvant-tools/releases/download/avanza-tools@${version}/kvant-dev-avanza-cli-${version}.tgz"
