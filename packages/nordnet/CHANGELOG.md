@@ -1,5 +1,11 @@
 # @kvant-dev/nordnet
 
+## 0.1.1
+
+### Patch Changes
+
+- e2b3f12: Link the package README to the new Nordnet documentation at antewall.github.io/kvant-tools, and list the `market` client's calls. First release published from CI.
+
 ## 0.1.0
 
 ### Minor Changes
