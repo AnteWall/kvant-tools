@@ -1,6 +1,6 @@
 {
   "name": "@kvant-dev/avanza-cli",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Command-line interface for Avanza",
   "repository": {
     "type": "git",

@@ -1,5 +1,11 @@
 # avanza-ts
 
+## 1.3.1
+
+### Patch Changes
+
+- d57a073: Publish under the `@kvant-dev` npm scope. `@kvant-dev/avanza` was previously published as `avanza-ts`, and `@kvant-dev/avanza-cli` as `avanza-tools`. The API and the `avanza` command are unchanged.
+
 ## 1.3.0
 
 ### Minor Changes
