@@ -1,5 +1,11 @@
 # @kvant-dev/nordnet
 
+## 0.2.0
+
+### Minor Changes
+
+- e8f5616: `NordnetSearchHit`: `currency`, `display_symbol`, `instrument_group_type`, `instrument_id` and `instrument_type` are now optional. Nordnet leaves them out of non-instrument results (the `SITE`, `BLOG`, `SHAREVILLE_PROFILES`, `SHAREVILLE_GROUPS` and `CURATED_LISTS` groups), so code that reads them needs to handle `undefined`.
+
 ## 0.1.1
 
 ### Patch Changes
