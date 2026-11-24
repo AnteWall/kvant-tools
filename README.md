@@ -1,5 +1,15 @@
 # Kvant Tools
 
+> [!NOTE]
+> **Renamed:** this repository was previously `avanza-ts`. The packages now live under the `@kvant-dev` npm scope:
+>
+> | Before               | Now                     |
+> | -------------------- | ----------------------- |
+> | `avanza-ts`          | `@kvant-dev/avanza`     |
+> | `avanza-tools` (CLI) | `@kvant-dev/avanza-cli` |
+>
+> The API and the `avanza` command are unchanged. Update your dependency and imports to the new names; `avanza-ts` and `avanza-tools` will no longer receive updates.
+
 > [!TIP]
 > <img src="https://raw.githubusercontent.com/AnteWall/avanza-desk/HEAD/src-tauri/icons/logo.svg" width="20" align="top" alt="" /> **New: [Avanza Desk](https://github.com/AnteWall/avanza-desk)** is a fast, keyboard-first trading terminal for your Avanza account, with built-in agent support. Free and open source. [Check it out →](https://github.com/AnteWall/avanza-desk)
 >
