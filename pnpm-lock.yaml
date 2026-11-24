@@ -240,6 +240,18 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
 
+  packages/avanza:
+    dependencies:
+      tough-cookie:
+        specifier: ^6.0.2
+        version: 6.0.2
+      undici:
+        specifier: ^8.12.3
+        version: 8.12.3
+      zod:
+        specifier: ^4.6.5
+        version: 4.6.5
+
   packages/avanza-cli:
     dependencies:
       '@clack/prompts':
@@ -247,7 +259,7 @@ importers:
         version: 1.8.1
       '@kvant-dev/avanza':
         specifier: workspace:^
-        version: link:../avanza-ts
+        version: link:../avanza
       '@napi-rs/keyring':
         specifier: ^2.1.0
         version: 2.1.0
@@ -262,19 +274,7 @@ importers:
         specifier: ^1.5.6
         version: 1.5.6
 
-  packages/avanza-ts:
-    dependencies:
-      tough-cookie:
-        specifier: ^6.0.2
-        version: 6.0.2
-      undici:
-        specifier: ^8.12.3
-        version: 8.12.3
-      zod:
-        specifier: ^4.6.5
-        version: 4.6.5
-
-  packages/nordnet-ts:
+  packages/nordnet:
     dependencies:
       tough-cookie:
         specifier: ^6.0.2

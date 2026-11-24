@@ -1,6 +1,6 @@
 {
-  "entryPoints": ["../../packages/avanza-ts/src/index.ts"],
-  "tsconfig": "../../packages/avanza-ts/tsconfig.json",
+  "entryPoints": ["../../packages/avanza/src/index.ts"],
+  "tsconfig": "../../packages/avanza/tsconfig.json",
   "out": "content/docs/sdk/reference/generated",
   "plugin": ["typedoc-plugin-markdown"],
   "router": "member",

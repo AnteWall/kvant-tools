@@ -4,7 +4,7 @@ import defaultMdxComponents from 'fumadocs-ui/mdx';
 import type { MDXComponents } from 'mdx/types';
 
 const generator = createGenerator({
-  tsconfigPath: '../../packages/avanza-ts/tsconfig.json',
+  tsconfigPath: '../../packages/avanza/tsconfig.json',
   cache: createFileSystemGeneratorCache('.next/fumadocs-typescript'),
 });
 

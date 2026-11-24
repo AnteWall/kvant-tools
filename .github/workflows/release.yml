@@ -4,9 +4,9 @@ on:
   push:
     branches: [main]
     paths:
-      - packages/avanza-ts/package.json
+      - packages/avanza/package.json
       - packages/avanza-cli/package.json
-      - packages/avanza-ts/CHANGELOG.md
+      - packages/avanza/CHANGELOG.md
       - packages/avanza-cli/CHANGELOG.md
   workflow_dispatch:
 
@@ -29,10 +29,10 @@ jobs:
       - name: Find changed versions
         id: versions
         run: |
-          for package in avanza-ts avanza-cli; do
+          for package in avanza avanza-cli; do
             current=$(jq -r .version "packages/$package/package.json")
             if node scripts/release-notes.mjs "$package" "$current" >/dev/null 2>&1; then
-              if [[ "$package" == 'avanza-ts' ]]; then
+              if [[ "$package" == 'avanza' ]]; then
                 echo "sdk=$current" >> "$GITHUB_OUTPUT"
               else
                 echo "cli=$current" >> "$GITHUB_OUTPUT"
@@ -76,7 +76,7 @@ jobs:
         run: |
           tag="avanza-ts@$VERSION"
           if ! gh release view "$tag" >/dev/null 2>&1; then
-            node scripts/release-notes.mjs avanza-ts "$VERSION" > "$RUNNER_TEMP/release-notes.md"
+            node scripts/release-notes.mjs avanza "$VERSION" > "$RUNNER_TEMP/release-notes.md"
             gh release create "$tag" --target "$GITHUB_SHA" --title "$tag" --notes-file "$RUNNER_TEMP/release-notes.md"
           fi
 
