@@ -1,5 +1,5 @@
+import { analysisProviders } from '@kvant-dev/avanza';
 import { Flags } from '@oclif/core';
-import { analysisProviders } from 'avanza-ts';
 
 import { ApiRequestCommand } from '../../output/api-request-command.js';
 

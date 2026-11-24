@@ -18,7 +18,7 @@ Reactivating TOTP can invalidate an existing authenticator setup. Keep the revea
 Provide credentials from your own secure configuration. The returned session is also installed on the client:
 
 ```ts
-import { AvanzaClient } from 'avanza-ts';
+import { AvanzaClient } from '@kvant-dev/avanza';
 
 const client = new AvanzaClient();
 const session = await client.auth.loginWithTotp({

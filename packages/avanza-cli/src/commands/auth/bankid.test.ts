@@ -11,7 +11,7 @@ const mocks = vi.hoisted(() => ({
   startBankId: vi.fn(),
 }));
 
-vi.mock('avanza-ts', () => ({
+vi.mock('@kvant-dev/avanza', () => ({
   AvanzaClient: class {
     public auth = { startBankId: mocks.startBankId };
   },

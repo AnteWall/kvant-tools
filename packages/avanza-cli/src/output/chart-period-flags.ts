@@ -1,5 +1,5 @@
+import { chartPeriods, type PriceChartPeriod } from '@kvant-dev/avanza';
 import { Flags } from '@oclif/core';
-import { chartPeriods, type PriceChartPeriod } from 'avanza-ts';
 
 export const chartPeriodFlags = {
   period: Flags.option({ options: chartPeriods, exclusive: ['from', 'to'] })({

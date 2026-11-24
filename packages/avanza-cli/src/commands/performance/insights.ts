@@ -1,5 +1,5 @@
+import { insightsPeriods } from '@kvant-dev/avanza';
 import { Flags } from '@oclif/core';
-import { insightsPeriods } from 'avanza-ts';
 
 import { ApiRequestCommand } from '../../output/api-request-command.js';
 

@@ -6,7 +6,7 @@ description: Stream live quotes, order depth, trades, and your own orders from A
 Avanza pushes live data as [Server-Sent Events](https://html.spec.whatwg.org/multipage/server-sent-events.html) (SSE) from endpoints under `/_push`. It does not use WebSockets. `client.push` wraps these endpoints. Every method returns an async iterator that yields parsed events, reconnects when the connection drops, and requires a signed-in session.
 
 ```ts
-import { AvanzaClient } from 'avanza-ts';
+import { AvanzaClient } from '@kvant-dev/avanza';
 
 const client = new AvanzaClient({ session });
 const controller = new AbortController();
@@ -111,7 +111,7 @@ These delays match Avanza's web app. On reconnect the SDK sends `Last-Event-ID` 
 undici 8's `fetch` negotiates HTTP/2 by default, so wrap that one:
 
 ```ts
-import { AvanzaClient } from 'avanza-ts';
+import { AvanzaClient } from '@kvant-dev/avanza';
 import { fetch as http2Fetch } from 'undici';
 
 const client = new AvanzaClient({

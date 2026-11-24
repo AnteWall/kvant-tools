@@ -3,10 +3,10 @@ title: Client and configuration
 description: Create an AvanzaClient and configure its transport and session.
 ---
 
-Import `AvanzaClient` from `avanza-ts`. One instance owns its HTTP transport, active session, and domain clients.
+Import `AvanzaClient` from `@kvant-dev/avanza`. One instance owns its HTTP transport, active session, and domain clients.
 
 ```ts
-import { AvanzaClient } from 'avanza-ts';
+import { AvanzaClient } from '@kvant-dev/avanza';
 
 const client = new AvanzaClient();
 const results = await client.market.search('volvo');

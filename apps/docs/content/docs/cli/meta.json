@@ -1,5 +1,5 @@
 {
-  "title": "avanza-tools",
+  "title": "@kvant-dev/avanza-cli",
   "description": "Command-line documentation",
   "root": true,
   "pages": [

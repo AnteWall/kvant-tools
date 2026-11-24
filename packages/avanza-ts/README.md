@@ -1,4 +1,4 @@
-# avanza-ts
+# @kvant-dev/avanza
 
 Reusable, ESM-first TypeScript SDK for Avanza.
 
@@ -14,7 +14,7 @@ The author of this software is not responsible for any indirect damages (foresee
 contain the individual API operations.
 
 ```ts
-import { AvanzaClient, type AvanzaSession } from 'avanza-ts';
+import { AvanzaClient, type AvanzaSession } from '@kvant-dev/avanza';
 
 const session: AvanzaSession = {
   authenticationSession: process.env.AVANZA_AUTHENTICATION_SESSION!,

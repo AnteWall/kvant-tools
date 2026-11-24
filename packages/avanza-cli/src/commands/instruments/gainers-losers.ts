@@ -1,5 +1,5 @@
+import { stockFilterSchema, type StockFilter } from '@kvant-dev/avanza';
 import { Flags } from '@oclif/core';
-import { stockFilterSchema, type StockFilter } from 'avanza-ts';
 
 import { ApiRequestCommand } from '../../output/api-request-command.js';
 

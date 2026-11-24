@@ -6,13 +6,13 @@ description: Install the SDK and make a public market request.
 Install the package in a Node.js 22.19+ application:
 
 ```sh
-pnpm add avanza-ts
+pnpm add @kvant-dev/avanza
 ```
 
 Create a client and make a public request:
 
 ```ts
-import { AvanzaClient } from 'avanza-ts';
+import { AvanzaClient } from '@kvant-dev/avanza';
 
 const client = new AvanzaClient();
 const results = await client.market.search('volvo');

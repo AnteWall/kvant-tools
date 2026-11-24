@@ -12,7 +12,7 @@ const mocks = vi.hoisted(() => ({
   validateSession: vi.fn(),
 }));
 
-vi.mock('avanza-ts', () => ({
+vi.mock('@kvant-dev/avanza', () => ({
   AvanzaClient: class {
     public auth = {
       getSessionInfo: async () => {

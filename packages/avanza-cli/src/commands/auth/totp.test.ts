@@ -18,7 +18,7 @@ vi.mock('@clack/prompts', () => ({
   text: mocks.text,
 }));
 
-vi.mock('avanza-ts', () => ({
+vi.mock('@kvant-dev/avanza', () => ({
   AvanzaClient: class {
     public auth = { loginWithTotp: mocks.loginWithTotp };
   },

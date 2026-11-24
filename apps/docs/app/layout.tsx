@@ -8,7 +8,8 @@ import './global.css';
 
 export const metadata: Metadata = {
   title: { default: 'Kvant Tools', template: '%s | Kvant Tools' },
-  description: 'Documentation for Kvant Tools: the avanza-ts SDK and avanza-tools (CLI).',
+  description:
+    'Documentation for Kvant Tools: the @kvant-dev/avanza SDK and @kvant-dev/avanza-cli (CLI).',
 };
 
 export default function Layout({ children }: { children: ReactNode }) {

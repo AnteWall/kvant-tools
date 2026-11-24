@@ -6,7 +6,7 @@ description: Restore, validate, and clear an SDK session.
 The SDK keeps its session in memory. Persisting it is the application's responsibility.
 
 ```ts
-import { AvanzaClient } from 'avanza-ts';
+import { AvanzaClient } from '@kvant-dev/avanza';
 
 const client = new AvanzaClient({ session: restoredSession });
 const valid = await client.auth.validateSession();

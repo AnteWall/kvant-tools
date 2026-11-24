@@ -1,5 +1,5 @@
 {
-  "name": "avanza-tools",
+  "name": "@kvant-dev/avanza-cli",
   "version": "1.2.0",
   "description": "Command-line interface for Avanza",
   "repository": {
@@ -32,9 +32,9 @@
   },
   "dependencies": {
     "@clack/prompts": "^1.8.1",
+    "@kvant-dev/avanza": "workspace:^",
     "@napi-rs/keyring": "^2.1.0",
     "@oclif/core": "^5.0.0",
-    "avanza-ts": "workspace:^",
     "qrcode": "^1.5.4"
   },
   "devDependencies": {

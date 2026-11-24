@@ -1,5 +1,5 @@
+import { watchlistDataPoints } from '@kvant-dev/avanza';
 import { Flags } from '@oclif/core';
-import { watchlistDataPoints } from 'avanza-ts';
 
 import { ApiRequestCommand } from '../../output/api-request-command.js';
 import { watchlistFlags, watchlistOrderbookIds } from '../../output/watchlist-flags.js';

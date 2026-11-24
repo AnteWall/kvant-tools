@@ -1,6 +1,6 @@
 ---
 name: api-fixtures
-description: Use when writing or updating avanza-ts SDK API tests or recorded HTTP fixtures. Capture responses with the avanza CLI and remove personal data before adding fixtures to the repository.
+description: Use when writing or updating @kvant-dev/avanza SDK API tests or recorded HTTP fixtures. Capture responses with the avanza CLI and remove personal data before adding fixtures to the repository.
 ---
 
 # API tests and fixtures

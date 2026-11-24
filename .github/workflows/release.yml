@@ -60,14 +60,14 @@ jobs:
       - run: npm install -g npm@^11
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
-      - run: pnpm --filter avanza-ts build
+      - run: pnpm --filter @kvant-dev/avanza build
       - name: Publish SDK
         env:
           VERSION: ${{ needs.versions.outputs.sdk }}
         run: |
-          if ! npm view "avanza-ts@$VERSION" version >/dev/null 2>&1; then
-            pnpm --filter avanza-ts pack --pack-destination "$RUNNER_TEMP"
-            npm publish "$RUNNER_TEMP/avanza-ts-$VERSION.tgz" --access public
+          if ! npm view "@kvant-dev/avanza@$VERSION" version >/dev/null 2>&1; then
+            pnpm --filter @kvant-dev/avanza pack --pack-destination "$RUNNER_TEMP"
+            npm publish "$RUNNER_TEMP/kvant-dev-avanza-$VERSION.tgz" --access public
           fi
       - name: Create SDK GitHub release
         env:
@@ -100,14 +100,14 @@ jobs:
       - run: npm install -g npm@^11
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
-      - run: pnpm --filter avanza-tools... build
+      - run: pnpm --filter @kvant-dev/avanza-cli... build
       - name: Publish CLI
         env:
           VERSION: ${{ needs.versions.outputs.cli }}
         run: |
-          pnpm --filter avanza-tools pack --pack-destination "$RUNNER_TEMP"
-          if ! npm view "avanza-tools@$VERSION" version >/dev/null 2>&1; then
-            npm publish "$RUNNER_TEMP/avanza-tools-$VERSION.tgz" --access public
+          pnpm --filter @kvant-dev/avanza-cli pack --pack-destination "$RUNNER_TEMP"
+          if ! npm view "@kvant-dev/avanza-cli@$VERSION" version >/dev/null 2>&1; then
+            npm publish "$RUNNER_TEMP/kvant-dev-avanza-cli-$VERSION.tgz" --access public
           fi
       - name: Create CLI GitHub release
         env:
@@ -115,7 +115,7 @@ jobs:
           VERSION: ${{ needs.versions.outputs.cli }}
         run: |
           tag="avanza-tools@$VERSION"
-          asset="avanza-tools-$VERSION.tgz"
+          asset="kvant-dev-avanza-cli-$VERSION.tgz"
           if ! gh release view "$tag" >/dev/null 2>&1; then
             node scripts/release-notes.mjs avanza-cli "$VERSION" > "$RUNNER_TEMP/release-notes.md"
             gh release create "$tag" --target "$GITHUB_SHA" --title "$tag" --notes-file "$RUNNER_TEMP/release-notes.md"

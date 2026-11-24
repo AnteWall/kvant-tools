@@ -1,5 +1,5 @@
+import { AvanzaClient, AvanzaHttpError } from '@kvant-dev/avanza';
 import { Command } from '@oclif/core';
-import { AvanzaClient, AvanzaHttpError } from 'avanza-ts';
 
 import { deleteSession, loadSession, saveSession } from '../services/session/session-store.js';
 

@@ -1,15 +1,15 @@
 ---
 name: avanza-cli
-description: Use the avanza-tools `avanza` CLI to answer questions about stocks, funds, ETFs, market data, portfolios, accounts, transactions, dividends, orders, watchlists, and savings. Use when a user asks to look up or analyze Avanza investment data, even if they don't mention the CLI. Covers command discovery, sign-in, structured output, and handling private financial data.
+description: Use the @kvant-dev/avanza-cli `avanza` CLI to answer questions about stocks, funds, ETFs, market data, portfolios, accounts, transactions, dividends, orders, watchlists, and savings. Use when a user asks to look up or analyze Avanza investment data, even if they don't mention the CLI. Covers command discovery, sign-in, structured output, and handling private financial data.
 ---
 
 # Avanza CLI
 
-Use `avanza` (the executable from the `avanza-tools` package) for Avanza data. This is an unofficial client, not affiliated with Avanza Bank AB. Prices and API availability may change; report the data returned rather than implying it is live or guaranteed.
+Use `avanza` (the executable from the `@kvant-dev/avanza-cli` package) for Avanza data. This is an unofficial client, not affiliated with Avanza Bank AB. Prices and API availability may change; report the data returned rather than implying it is live or guaranteed.
 
 ## First steps
 
-1. Check availability with `avanza --help`. If it is missing, tell the user to install it with `npm install -g avanza-tools` (Node.js 22.19+) or `brew install AnteWall/tap/avanza-tools`; don't install software without the user's permission.
+1. Check availability with `avanza --help`. If it is missing, tell the user to install it with `npm install -g @kvant-dev/avanza-cli` (Node.js 22.19+) or `brew install AnteWall/tap/avanza-tools`; don't install software without the user's permission.
 2. Pick the narrowest command below. Check `avanza <topic> <command> --help` for required flags and accepted values. Use `avanza <topic> --help` to discover other commands.
 3. Prefer `--json` for structured results. Use `--fields` (not `--columns`) to select only the JSON properties needed; see below. Do not assume every command supports these flags (auth sign-in and logout do not).
 4. State the instrument and date/period behind any numbers; distinguish account-specific results from public market data. If the user asks for a trade, explain that this CLI has no buy/sell placement command; `orders` reads existing orders.

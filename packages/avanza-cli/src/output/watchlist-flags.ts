@@ -1,5 +1,5 @@
+import type { AvanzaClient } from '@kvant-dev/avanza';
 import { Flags } from '@oclif/core';
-import type { AvanzaClient } from 'avanza-ts';
 
 export const watchlistFlags = {
   'watchlist-id': Flags.string({ required: true, description: 'Watchlist ID' }),

@@ -1,6 +1,6 @@
 import { cancel, isCancel, password, text } from '@clack/prompts';
+import { AvanzaClient } from '@kvant-dev/avanza';
 import { Command } from '@oclif/core';
-import { AvanzaClient } from 'avanza-ts';
 
 import { saveSession } from '../../services/session/session-store.js';
 

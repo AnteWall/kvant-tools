@@ -1,5 +1,5 @@
+import { AvanzaClient, type AvanzaSession } from '@kvant-dev/avanza';
 import { Command } from '@oclif/core';
-import { AvanzaClient, type AvanzaSession } from 'avanza-ts';
 
 import {
   deleteSession,

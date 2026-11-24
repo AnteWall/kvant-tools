@@ -9,10 +9,10 @@ const mocks = vi.hoisted(() => ({
 }));
 vi.mock('../../services/session/session-store.js', () => mocks);
 // Push streams use HTTP/2 unless a fetch is given; route them through the mocked global fetch.
-vi.mock('avanza-ts', async (importOriginal) => {
-  const original = await importOriginal<typeof import('avanza-ts')>();
+vi.mock('@kvant-dev/avanza', async (importOriginal) => {
+  const original = await importOriginal<typeof import('@kvant-dev/avanza')>();
   class AvanzaClient extends original.AvanzaClient {
-    public constructor(options: import('avanza-ts').AvanzaClientOptions = {}) {
+    public constructor(options: import('@kvant-dev/avanza').AvanzaClientOptions = {}) {
       super({ ...options, fetch: (...args) => globalThis.fetch(...args) });
     }
   }

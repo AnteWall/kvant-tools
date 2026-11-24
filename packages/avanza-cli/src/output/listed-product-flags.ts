@@ -1,5 +1,5 @@
+import type { ListedProductFilter, ScreenListedProductsOptions } from '@kvant-dev/avanza';
 import { Flags } from '@oclif/core';
-import type { ListedProductFilter, ScreenListedProductsOptions } from 'avanza-ts';
 
 import { parseJsonObject } from './json-array.js';
 

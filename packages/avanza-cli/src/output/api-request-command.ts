@@ -1,4 +1,4 @@
-import { AvanzaClient, AvanzaHttpError } from 'avanza-ts';
+import { AvanzaClient, AvanzaHttpError } from '@kvant-dev/avanza';
 
 import { deleteSession, loadSession, saveSession } from '../services/session/session-store.js';
 import { ApiCommand } from './api-output.js';

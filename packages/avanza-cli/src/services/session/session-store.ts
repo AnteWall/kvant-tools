@@ -1,5 +1,5 @@
+import type { AvanzaSession } from '@kvant-dev/avanza';
 import { AsyncEntry, type EntryOptions } from '@napi-rs/keyring';
-import type { AvanzaSession } from 'avanza-ts';
 
 const SERVICE = 'avanza-cli';
 const ACCOUNT = 'session';

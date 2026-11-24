@@ -1,5 +1,5 @@
 {
-  "title": "avanza-ts SDK",
+  "title": "@kvant-dev/avanza SDK",
   "description": "TypeScript SDK documentation",
   "root": true,
   "pages": ["index", "getting-started", "authentication", "sessions", "reference"]

@@ -1,5 +1,5 @@
+import { savedFiltersSchema } from '@kvant-dev/avanza';
 import { Flags } from '@oclif/core';
-import { savedFiltersSchema } from 'avanza-ts';
 
 import { ApiRequestCommand } from '../../../output/api-request-command.js';
 import { parseJsonArray } from '../../../output/json-array.js';

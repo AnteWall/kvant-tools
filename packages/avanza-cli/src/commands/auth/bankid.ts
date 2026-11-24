@@ -1,7 +1,7 @@
 import { setTimeout } from 'node:timers/promises';
 
+import { AvanzaClient, type BankIdAuthAttempt } from '@kvant-dev/avanza';
 import { Command } from '@oclif/core';
-import { AvanzaClient, type BankIdAuthAttempt } from 'avanza-ts';
 
 import { TerminalQr } from '../../output/terminal-qr.js';
 import { saveSession } from '../../services/session/session-store.js';

@@ -5,7 +5,7 @@
 >
 > <a href="https://github.com/AnteWall/avanza-desk"><img src="https://raw.githubusercontent.com/AnteWall/avanza-desk/HEAD/docs/screenshots/workspace.png" width="480" alt="Avanza Desk workspace" /></a>
 
-Unofficial TypeScript SDKs and command-line tools for Nordic brokers: Avanza (`avanza-ts`, `avanza-tools`) and Nordnet (`@kvant-dev/nordnet`).
+Unofficial TypeScript SDKs and command-line tools for Nordic brokers: Avanza (`@kvant-dev/avanza`, `@kvant-dev/avanza-cli`) and Nordnet (`@kvant-dev/nordnet`).
 
 **Documentation:** [SDK guide](https://antewall.github.io/kvant-tools/docs/sdk/) · [CLI guide](https://antewall.github.io/kvant-tools/docs/cli/) · [Full documentation](https://antewall.github.io/kvant-tools/)
 
@@ -13,16 +13,16 @@ Unofficial TypeScript SDKs and command-line tools for Nordic brokers: Avanza (`a
 
 Requires Node.js 22.12 or newer.
 
-## TypeScript SDK — `avanza-ts`
+## TypeScript SDK — `@kvant-dev/avanza`
 
 Use the SDK in a Node.js application to access Avanza market data and authenticated account features.
 
 ```sh
-npm install avanza-ts
+npm install @kvant-dev/avanza
 ```
 
 ```ts
-import { AvanzaClient } from 'avanza-ts';
+import { AvanzaClient } from '@kvant-dev/avanza';
 
 const client = new AvanzaClient();
 const results = await client.market.search('volvo');
@@ -31,12 +31,12 @@ console.log(results);
 
 Public market requests work without signing in. See the [SDK getting-started guide](https://antewall.github.io/kvant-tools/docs/sdk/getting-started) for more.
 
-## CLI — `avanza-tools`
+## CLI — `@kvant-dev/avanza-cli`
 
 Install the `avanza` command on macOS, Linux, or Windows:
 
 ```sh
-npm install --global avanza-tools
+npm install --global @kvant-dev/avanza-cli
 avanza market search --query volvo --limit 5
 ```
 
@@ -52,7 +52,7 @@ See the [CLI getting-started guide](https://antewall.github.io/kvant-tools/docs/
 
 ## Disclaimer
 
-`avanza-ts` and `avanza-tools` are unofficial tools for Avanza's API. They are not affiliated with Avanza Bank AB. The underlying API can be taken down or changed without warning at any point in time.
+`@kvant-dev/avanza` and `@kvant-dev/avanza-cli` are unofficial tools for Avanza's API. They are not affiliated with Avanza Bank AB. The underlying API can be taken down or changed without warning at any point in time.
 
 The author of this software is not responsible for any indirect damages (foreseeable or unforeseeable), such as, if necessary, loss or alteration of or fraudulent access to data, accidental transmission of viruses or of any other harmful element, loss of profits or opportunities, the cost of replacement goods and services or the attitude and behavior of a third party.
 
@@ -73,8 +73,8 @@ Run `pnpm dev` to watch both TypeScript packages. Use `pnpm changeset` to descri
 
 ## Releases
 
-The SDK and CLI have independent versions and GitHub Releases. Add a changeset for each publishable change and merge it into `main`. The [version workflow](.github/workflows/version.yml) pushes version and changelog commits to a **Version Packages** PR; merge that PR to start the [release workflow](.github/workflows/release.yml). It checks, builds, and publishes changed packages to npm, then creates `avanza-ts@<version>` and/or `avanza-tools@<version>` GitHub Releases with their changelog entries. A CLI release waits for the SDK if both versions change together. Rerun **Release packages** manually on `main` to retry a partial release; published npm versions and existing GitHub Releases are skipped.
+The SDK and CLI have independent versions and GitHub Releases. Add a changeset for each publishable change and merge it into `main`. The [version workflow](.github/workflows/version.yml) pushes version and changelog commits to a **Version Packages** PR; merge that PR to start the [release workflow](.github/workflows/release.yml). It checks, builds, and publishes changed packages to npm, then creates `@kvant-dev/avanza@<version>` and/or `@kvant-dev/avanza-cli@<version>` GitHub Releases with their changelog entries. A CLI release waits for the SDK if both versions change together. Rerun **Release packages** manually on `main` to retry a partial release; published npm versions and existing GitHub Releases are skipped.
 
 Run `pnpm --filter @kvant-dev/docs dev` to work on the documentation locally. The docs build generates CLI topic pages from oclif help before exporting the static site. GitHub Pages deployment runs from `.github/workflows/docs.yml` (select **GitHub Actions** as the repository's Pages source).
 
-The docs build also generates the [SDK API reference](https://antewall.github.io/kvant-tools/docs/sdk/reference/generated/) from the `avanza-ts` public entry point using TypeDoc. Run `pnpm --filter @kvant-dev/docs generate:sdk` to refresh it locally.
+The docs build also generates the [SDK API reference](https://antewall.github.io/kvant-tools/docs/sdk/reference/generated/) from the `@kvant-dev/avanza` public entry point using TypeDoc. Run `pnpm --filter @kvant-dev/docs generate:sdk` to refresh it locally.

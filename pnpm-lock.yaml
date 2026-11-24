@@ -245,15 +245,15 @@ importers:
       '@clack/prompts':
         specifier: ^1.8.1
         version: 1.8.1
+      '@kvant-dev/avanza':
+        specifier: workspace:^
+        version: link:../avanza-ts
       '@napi-rs/keyring':
         specifier: ^2.1.0
         version: 2.1.0
       '@oclif/core':
         specifier: ^5.0.0
         version: 5.0.0
-      avanza-ts:
-        specifier: workspace:^
-        version: link:../avanza-ts
       qrcode:
         specifier: ^1.5.4
         version: 1.5.4

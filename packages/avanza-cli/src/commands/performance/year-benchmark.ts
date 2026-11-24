@@ -1,5 +1,5 @@
+import { yearBenchmarkIndices } from '@kvant-dev/avanza';
 import { Flags } from '@oclif/core';
-import { yearBenchmarkIndices } from 'avanza-ts';
 
 import { ApiRequestCommand } from '../../output/api-request-command.js';
 

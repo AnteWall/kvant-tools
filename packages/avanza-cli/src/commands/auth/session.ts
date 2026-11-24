@@ -1,4 +1,4 @@
-import { AvanzaClient, type AvanzaSession } from 'avanza-ts';
+import { AvanzaClient, type AvanzaSession } from '@kvant-dev/avanza';
 
 import { ApiCommand } from '../../output/api-output.js';
 import { recordFixture } from '../../output/http-fixture.js';

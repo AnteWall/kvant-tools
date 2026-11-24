@@ -1,5 +1,5 @@
+import type { FundListOptions } from '@kvant-dev/avanza';
 import { Flags } from '@oclif/core';
-import type { FundListOptions } from 'avanza-ts';
 
 import { ApiRequestCommand } from '../../output/api-request-command.js';
 import { parseJsonObject } from '../../output/json-array.js';

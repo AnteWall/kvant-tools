@@ -8,7 +8,7 @@ const mocks = vi.hoisted(() => ({
   logout: vi.fn(),
 }));
 
-vi.mock('avanza-ts', () => ({
+vi.mock('@kvant-dev/avanza', () => ({
   AvanzaClient: class {
     public auth = { logout: mocks.logout };
   },

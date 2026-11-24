@@ -1,5 +1,5 @@
+import { chartResolutions } from '@kvant-dev/avanza';
 import { Flags } from '@oclif/core';
-import { chartResolutions } from 'avanza-ts';
 
 import { ApiRequestCommand } from '../../output/api-request-command.js';
 import { chartPeriod, chartPeriodFlags } from '../../output/chart-period-flags.js';

@@ -1,5 +1,5 @@
+import { listedInstrumentTypes } from '@kvant-dev/avanza';
 import { Flags } from '@oclif/core';
-import { listedInstrumentTypes } from 'avanza-ts';
 
 import { ApiRequestCommand } from '../../output/api-request-command.js';
 
