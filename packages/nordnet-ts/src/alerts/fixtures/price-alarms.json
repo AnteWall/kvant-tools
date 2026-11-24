@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/2/price_alarms/alarms"
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "results": [],
+      "rows": 0,
+      "total_hits": 0
+    }
+  }
+}

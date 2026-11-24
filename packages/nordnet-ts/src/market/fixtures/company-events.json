@@ -1,0 +1,63 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/company-data/v1/company-events/instruments/19fa390b-040f-45a9-8fa2-e7fd34e319ab"
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "instrumentId": "19fa390b-040f-45a9-8fa2-e7fd34e319ab",
+      "events": [
+        {
+          "id": "59c9d8d0-3bad-3356-b431-cad9fbd5d607",
+          "date": "2027-05-07",
+          "instrumentId": "19fa390b-040f-45a9-8fa2-e7fd34e319ab",
+          "hasAiSummary": false,
+          "source": {
+            "source": "QUARTR",
+            "displayName": "Quartr",
+            "sourcedAt": "2026-11-09T05:23:35.161407Z"
+          },
+          "report": {},
+          "eventType": {
+            "value": "ANNUAL_GENERAL_MEETING",
+            "displayName": "Årsstämma 2027"
+          },
+          "fiscalPeriod": {
+            "year": 2027,
+            "period": "FY"
+          },
+          "displayName": "Årsstämma 2027"
+        },
+        {
+          "id": "2243b8ec-36b2-3b9f-a89e-078b92e5a577",
+          "date": "2027-01-22",
+          "instrumentId": "19fa390b-040f-45a9-8fa2-e7fd34e319ab",
+          "hasAiSummary": false,
+          "source": {
+            "source": "QUARTR",
+            "displayName": "Quartr",
+            "sourcedAt": "2026-11-09T05:23:35.161407Z"
+          },
+          "report": {},
+          "eventType": {
+            "value": "EARNINGS_REPORT",
+            "displayName": "2026 Q4 - rapport"
+          },
+          "fiscalPeriod": {
+            "year": 2026,
+            "period": "Q4"
+          },
+          "displayName": "2026 Q4 - rapport"
+        }
+      ],
+      "sources": [
+        {
+          "source": "QUARTR",
+          "displayName": "Quartr",
+          "sourcedAt": "2026-11-09T05:23:35.161407Z"
+        }
+      ]
+    }
+  }
+}

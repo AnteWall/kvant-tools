@@ -1,0 +1,86 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/company-data/v1/ratings/cd36c82c-da5f-4a7e-8be5-70d64b6f1853"
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "currentRating": {
+        "priceTarget": {
+          "high": {
+            "currency": "SEK",
+            "value": 465
+          },
+          "low": {
+            "currency": "SEK",
+            "value": 337
+          },
+          "mean": {
+            "currency": "SEK",
+            "value": 418.11
+          },
+          "numberOfEstimates": 9,
+          "windowSize": 90
+        },
+        "ratingDetails": {
+          "buy": {
+            "count": 2,
+            "percentage": 20
+          },
+          "hold": {
+            "count": 6,
+            "percentage": 60
+          },
+          "sell": {
+            "count": 2,
+            "percentage": 20
+          },
+          "totalCount": 10,
+          "windowSize": 90
+        },
+        "ratingPeriod": "2026-11-06"
+      },
+      "historicalRatings": [
+        {
+          "priceTarget": {
+            "high": {
+              "currency": "SEK",
+              "value": 465
+            },
+            "low": {
+              "currency": "SEK",
+              "value": 337
+            },
+            "mean": {
+              "currency": "SEK",
+              "value": 418.11
+            },
+            "numberOfEstimates": 9,
+            "windowSize": 90
+          },
+          "ratingDetails": {
+            "buy": {
+              "count": 2,
+              "percentage": 20
+            },
+            "hold": {
+              "count": 6,
+              "percentage": 60
+            },
+            "sell": {
+              "count": 2,
+              "percentage": 20
+            },
+            "totalCount": 10,
+            "windowSize": 90
+          },
+          "ratingPeriod": "2026-11-06"
+        }
+      ],
+      "nordnetOwnerDisclaimer": false,
+      "sources": ["FACTSET"],
+      "updatedAt": "2026-11-09T03:51:12.587785625"
+    }
+  }
+}

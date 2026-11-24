@@ -1,0 +1,62 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/2/instruments/16099874"
+  },
+  "response": {
+    "status": 200,
+    "body": [
+      {
+        "has_ucits": true,
+        "mifid2_category": 0,
+        "price_type": "monetary_amount",
+        "underlyings": [
+          {
+            "instrumment_id": 17931213,
+            "instrument_id": 17931213,
+            "symbol": "Realkredit Danmark A/S 5%",
+            "isin_code": "DK0004623816"
+          },
+          {
+            "instrumment_id": 19405699,
+            "instrument_id": 19405699,
+            "symbol": "Danske Bank A/S 3.75%",
+            "isin_code": "XS3307977622"
+          }
+        ],
+        "tradables": [
+          {
+            "market_id": 14,
+            "tick_size_id": 18069368,
+            "display_order": 0,
+            "lot_size": 1,
+            "mic": "XCSE",
+            "price_unit": "DKK",
+            "identifier": "36429"
+          }
+        ],
+        "instrument_id": 16099874,
+        "asset_class": "IRT",
+        "instrument_type": "PINV",
+        "instrument_group_type": "PAR",
+        "currency": "DKK",
+        "sfdr_article": 8,
+        "management_fee": 1.75,
+        "total_fee": 0.24,
+        "multiplier": 1,
+        "pawn_percentage": 85,
+        "margin_percentage": 130,
+        "symbol": "MAJDKO",
+        "isin_code": "DK0060005098",
+        "name": "Maj Invest Danske Obligationer",
+        "nnx_instrument": {
+          "instrument_id": 16099874,
+          "nnx_instrument_id": "bedd7a94-1b57-49e5-b664-15482c9b9b50",
+          "nnx_trading_order_book_id": "4559e702-dbbd-4017-a4bb-e1582a5035a5",
+          "nnx_market_data_order_book_id": "4559e702-dbbd-4017-a4bb-e1582a5035a5",
+          "nnx_custody_instrument_id": "a109ad8c-2b40-45a0-8af6-2ee4ae22585b"
+        }
+      }
+    ]
+  }
+}

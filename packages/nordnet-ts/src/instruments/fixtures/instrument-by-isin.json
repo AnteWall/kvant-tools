@@ -1,0 +1,40 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/2/instruments/lookup/isin_code_currency_market_id/SE0015811963%3ASEK%3A11"
+  },
+  "response": {
+    "status": 200,
+    "body": [
+      {
+        "mifid2_category": 0,
+        "price_type": "monetary_amount",
+        "tradables": [
+          {
+            "market_id": 11,
+            "tick_size_id": 14735,
+            "display_order": 0,
+            "lot_size": 1,
+            "mic": "XSTO",
+            "price_unit": "SEK",
+            "identifier": "161"
+          }
+        ],
+        "instrument_id": 16102308,
+        "asset_class": "EQY",
+        "instrument_type": "ESH",
+        "instrument_group_type": "EQ",
+        "currency": "SEK",
+        "number_of_securities": 1821936744,
+        "multiplier": 1,
+        "pawn_percentage": 85,
+        "margin_percentage": 115,
+        "symbol": "INVE B",
+        "isin_code": "SE0015811963",
+        "sector": "DIVERSIFIED_FINANCIAL_SERVICES",
+        "sector_group": "FINANCIAL",
+        "name": "Investor AB ser. B"
+      }
+    ]
+  }
+}

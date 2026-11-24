@@ -1,0 +1,29 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/holdings/historical-returns/v2/own-capital/risk-metrics",
+    "body": {
+      "accountIds": ["00000000-0000-4000-8000-000000000001"]
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "sharpeRatios": {
+        "sharpeRatio1Month": 0.5,
+        "sharpeRatio3Months": 0.5,
+        "sharpeRatio1Year": 0.5,
+        "sharpeRatio18Months": 0.5,
+        "sharpeRatio2Years": 0.5,
+        "sharpeRatio30Months": 0.5,
+        "sharpeRatio3Years": 0.5
+      },
+      "volatilities": {
+        "volatility1Month": 0.5,
+        "volatility3Months": 0.5,
+        "volatility1Year": 0.5,
+        "volatility3Years": 0.5
+      }
+    }
+  }
+}

@@ -1,4 +1,14 @@
 {
   "files": [],
-  "references": [{ "path": "./packages/avanza-ts" }, { "path": "./packages/avanza-cli" }]
+  "references": [
+    {
+      "path": "./packages/avanza-ts"
+    },
+    {
+      "path": "./packages/nordnet-ts"
+    },
+    {
+      "path": "./packages/avanza-cli"
+    }
+  ]
 }

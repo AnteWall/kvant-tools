@@ -1,0 +1,133 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/transaction/transaction-and-notes/v2/transactions/page",
+    "body": {
+      "accountIds": ["00000000-0000-4000-8000-000000000001"],
+      "fromDate": "2026-01-01",
+      "includeCancellations": false,
+      "limit": 50,
+      "offset": 0,
+      "sort": "ACCOUNTING_DATE",
+      "sortOrder": "DESC",
+      "toDate": "2026-01-31"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": [
+      {
+        "transactionId": "00000000-0000-4000-8000-000000000100",
+        "backofficeTransactionId": 1000,
+        "accountId": "00000000-0000-4000-8000-000000000001",
+        "accountNumber": 10000001,
+        "transactionTypeName": "KÖPT",
+        "transactionTypeCode": "K",
+        "transactionTag": "transaction-and-notes-buy-sell",
+        "transactionTypeId": "c629b401-f141-46c6-ba97-e722e22d7754",
+        "verificationNumber": 2000,
+        "contractNoteNumber": 2000,
+        "transactionText": "Köp Investor AB ser. B",
+        "instrumentName": "Investor AB ser. B",
+        "instrumentShortName": "INVE B",
+        "isinCode": "SE0015811963",
+        "legacyInstrumentId": 16102308,
+        "displaySlug": "investor-b-inve-b-xsto",
+        "instrumentClass": "STOCK",
+        "instrumentIconUrl": "https://example.test/icon.png",
+        "custodyInstrumentId": "00000000-0000-4000-8000-0000000000c1",
+        "accountingDate": "2026-01-02",
+        "businessDate": "2026-01-02",
+        "valueDate": "2026-01-06",
+        "settlementDate": "2026-01-06",
+        "quantity": 10,
+        "price": {
+          "currencyCode": "SEK",
+          "value": 300
+        },
+        "amount": {
+          "currencyCode": "SEK",
+          "value": -3000
+        },
+        "balance": {
+          "currencyCode": "SEK",
+          "value": 7000
+        },
+        "totalCharges": {
+          "currencyCode": "SEK",
+          "value": 0
+        },
+        "acquisitionCost": {
+          "currencyCode": "SEK",
+          "value": 3000
+        },
+        "currencyTo": "SEK",
+        "currencyFrom": "SEK",
+        "fxPrice": 1,
+        "hasBalanceEffect": true,
+        "acquisitionCostUpdatable": false,
+        "noteInfo": {
+          "clearing": {
+            "currencyCode": "SEK",
+            "value": 0
+          },
+          "commission": {
+            "currencyCode": "SEK",
+            "value": 0
+          },
+          "charge": {
+            "currencyCode": "SEK",
+            "value": 0
+          },
+          "foreignCharge": {
+            "currencyCode": "SEK",
+            "value": 0
+          },
+          "purchase": {
+            "currencyCode": "SEK",
+            "value": 3000
+          },
+          "handlingFee": {
+            "currencyCode": "SEK",
+            "value": 0
+          },
+          "interest": {
+            "currencyCode": "SEK",
+            "value": 0
+          },
+          "stampTax": {
+            "currencyCode": "SEK",
+            "value": 0
+          },
+          "hasPdf": false
+        }
+      },
+      {
+        "transactionId": "00000000-0000-4000-8000-000000000101",
+        "backofficeTransactionId": 1001,
+        "accountId": "00000000-0000-4000-8000-000000000001",
+        "accountNumber": 10000001,
+        "transactionTypeName": "REALTIDSINSÄTTNING",
+        "transactionTypeCode": "#RI",
+        "transactionTag": "transaction-and-notes-deposit-withdrawal",
+        "transactionTypeId": "3db7fa86-f5ac-43d8-83d8-aa6188dd973f",
+        "verificationNumber": 2001,
+        "transactionText": "Insättning",
+        "accountingDate": "2026-01-01",
+        "businessDate": "2026-01-01",
+        "valueDate": "2026-01-01",
+        "settlementDate": "2026-01-01",
+        "amount": {
+          "currencyCode": "SEK",
+          "value": 10000
+        },
+        "balance": {
+          "currencyCode": "SEK",
+          "value": 10000
+        },
+        "hasBalanceEffect": true,
+        "acquisitionCostUpdatable": false
+      }
+    ]
+  }
+}

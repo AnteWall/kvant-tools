@@ -1,0 +1,212 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/2/main_search?limit=3&query=investor&search_space=ALL"
+  },
+  "response": {
+    "status": 200,
+    "body": [
+      {
+        "display_group_type": "EQUITY",
+        "display_group_description": "Aktier",
+        "results": [
+          {
+            "instrument_id": 16102308,
+            "instrument_group_type": "EQ",
+            "instrument_type": "ESH",
+            "instrument_type_display_name": "Aktie",
+            "instrument_icon": "https://cdn.prod.nntech.io/cms-proxy/6xe8ehctp75g/55TtZWbAGU2iKTYp47VBgq/64081808c1143ce4b68e4e4c90a420c9/investor.png",
+            "display_name": "Investor AB ser. B",
+            "display_symbol": "INVE B",
+            "display_name_highlighted": "<highlight>Investor</highlight> AB ser. B",
+            "display_symbol_highlighted": "INVE B",
+            "last_price": {
+              "price": 429.1,
+              "decimals": 2
+            },
+            "close_price": {
+              "price": 428.15,
+              "decimals": 2
+            },
+            "spread": {
+              "price": 0.05,
+              "decimals": 4
+            },
+            "spread_pct": 0.01,
+            "currency": "SEK",
+            "price_unit": "SEK",
+            "diff_pct_one_day": 0.22,
+            "diff_pct_one_year": 37.27,
+            "tick_timestamp": 1794232473000,
+            "exchange_country": "SE",
+            "turnover": 465430761.27,
+            "turnover_volume": 1087491,
+            "market_info": {
+              "market_id": 11,
+              "market_sub_id": 4711,
+              "identifier": "161",
+              "tick_size_id": 14735
+            },
+            "status_info": {
+              "trading_status": "TRADING",
+              "translated_trading_status": "Öppen",
+              "tick_timestamp": 1794211202000
+            },
+            "nnx_instrument_id": "19fa390b-040f-45a9-8fa2-e7fd34e319ab",
+            "trading_order_book_id": "cd36c82c-da5f-4a7e-8be5-70d64b6f1853",
+            "market_data_order_book_id": "cd36c82c-da5f-4a7e-8be5-70d64b6f1853",
+            "display_slug": "investor-b-inve-b-xsto",
+            "instrument_class": "STOCK"
+          },
+          {
+            "instrument_id": 16102274,
+            "instrument_group_type": "EQ",
+            "instrument_type": "ESH",
+            "instrument_type_display_name": "Aktie",
+            "instrument_icon": "https://cdn.prod.nntech.io/cms-proxy/6xe8ehctp75g/55TtZWbAGU2iKTYp47VBgq/64081808c1143ce4b68e4e4c90a420c9/investor.png",
+            "display_name": "Investor AB ser. A",
+            "display_symbol": "INVE A",
+            "display_name_highlighted": "<highlight>Investor</highlight> AB ser. A",
+            "display_symbol_highlighted": "INVE A",
+            "last_price": {
+              "price": 421.3,
+              "decimals": 2
+            },
+            "close_price": {
+              "price": 420.2,
+              "decimals": 2
+            },
+            "spread": {
+              "price": 0.1,
+              "decimals": 4
+            },
+            "spread_pct": 0.02,
+            "currency": "SEK",
+            "price_unit": "SEK",
+            "diff_pct_one_day": 0.26,
+            "diff_pct_one_year": 35.64,
+            "tick_timestamp": 1794232469000,
+            "exchange_country": "SE",
+            "turnover": 65878231.5,
+            "turnover_volume": 156786,
+            "market_info": {
+              "market_id": 11,
+              "market_sub_id": 4711,
+              "identifier": "160",
+              "tick_size_id": 14734
+            },
+            "status_info": {
+              "trading_status": "TRADING",
+              "translated_trading_status": "Öppen",
+              "tick_timestamp": 1794211203000
+            },
+            "nnx_instrument_id": "bc6ed1a8-be69-436c-afa6-213025fc173e",
+            "trading_order_book_id": "a78e73f6-b702-4b09-8851-e84d7ab96c62",
+            "market_data_order_book_id": "a78e73f6-b702-4b09-8851-e84d7ab96c62",
+            "display_slug": "investor-a-inve-a-xsto",
+            "instrument_class": "STOCK"
+          }
+        ]
+      },
+      {
+        "display_group_type": "ETC",
+        "display_group_description": "Certifikat",
+        "results": [
+          {
+            "instrument_id": 19317637,
+            "instrument_group_type": "KO",
+            "instrument_type": "KBU",
+            "instrument_type_display_name": "Bull certifikat",
+            "instrument_icon": "https://cdn.prod.nntech.io/cms-proxy/6xe8ehctp75g/55TtZWbAGU2iKTYp47VBgq/64081808c1143ce4b68e4e4c90a420c9/investor.png",
+            "display_name": "BULL INVESTOR X2 NORDNET SE6",
+            "display_symbol": "BULL INVESTOR X2 NORDNET SE6",
+            "display_name_highlighted": "BULL <highlight>INVESTOR</highlight> X2 NORDNET SE6",
+            "display_symbol_highlighted": "BULL <highlight>INVESTOR</highlight> X2 NORDNET SE6",
+            "last_price": {
+              "price": 155.19,
+              "decimals": 2
+            },
+            "close_price": {
+              "price": 158.08,
+              "decimals": 2
+            },
+            "spread": {
+              "price": 1,
+              "decimals": 2
+            },
+            "spread_pct": 0.64,
+            "currency": "SEK",
+            "price_unit": "SEK",
+            "diff_pct_one_day": -1.83,
+            "tick_timestamp": 1794232477000,
+            "exchange_country": "SE",
+            "turnover": 9296.9,
+            "turnover_volume": 60,
+            "market_info": {
+              "market_id": 53,
+              "market_sub_id": 4861,
+              "identifier": "468504",
+              "tick_size_id": 14115
+            },
+            "status_info": {
+              "trading_status": "TRADING",
+              "translated_trading_status": "Öppen",
+              "tick_timestamp": 1794211230000
+            },
+            "nnx_instrument_id": "560f79c0-0ac7-498b-aa27-b292e4f803da",
+            "trading_order_book_id": "ec60fffe-e6a4-47b2-8e06-5204c50e12ba",
+            "market_data_order_book_id": "ec60fffe-e6a4-47b2-8e06-5204c50e12ba",
+            "display_slug": "bull-investor-x2-nordnet-se6-fnse",
+            "instrument_class": "BULL_BEAR"
+          },
+          {
+            "instrument_id": 19318261,
+            "instrument_group_type": "KO",
+            "instrument_type": "KBU",
+            "instrument_type_display_name": "Bull certifikat",
+            "instrument_icon": "https://cdn.prod.nntech.io/cms-proxy/6xe8ehctp75g/55TtZWbAGU2iKTYp47VBgq/64081808c1143ce4b68e4e4c90a420c9/investor.png",
+            "display_name": "BULL INVESTOR X3 NORDNET SE1",
+            "display_symbol": "BULL INVESTOR X3 NORDNET SE1",
+            "display_name_highlighted": "BULL <highlight>INVESTOR</highlight> X3 NORDNET SE1",
+            "display_symbol_highlighted": "BULL <highlight>INVESTOR</highlight> X3 NORDNET SE1",
+            "last_price": {
+              "price": 0,
+              "decimals": 3
+            },
+            "close_price": {
+              "price": 196.57,
+              "decimals": 2
+            },
+            "spread": {
+              "price": 1.5,
+              "decimals": 2
+            },
+            "spread_pct": 0.8,
+            "currency": "SEK",
+            "price_unit": "SEK",
+            "tick_timestamp": 1794232477000,
+            "exchange_country": "SE",
+            "turnover": 0,
+            "turnover_volume": 0,
+            "market_info": {
+              "market_id": 53,
+              "market_sub_id": 4861,
+              "identifier": "467976",
+              "tick_size_id": 14115
+            },
+            "status_info": {
+              "trading_status": "TRADING",
+              "translated_trading_status": "Öppen",
+              "tick_timestamp": 1794211230000
+            },
+            "nnx_instrument_id": "0c28da1f-0213-4b38-9672-d50a8c9dd9ce",
+            "trading_order_book_id": "ec097fa8-c61b-4f15-ba7f-b3020f9355d6",
+            "market_data_order_book_id": "ec097fa8-c61b-4f15-ba7f-b3020f9355d6",
+            "display_slug": "bull-investor-x3-nordnet-se1-fnse",
+            "instrument_class": "BULL_BEAR"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/news/v1/news/f869a8cb-42a0-4a39-94a1-c0e76f41444f"
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "agency": {
+        "id": "FINWIRE_MAIN",
+        "logoLink": "https://cdn.prod.nntech.io/cms-proxy/s4yelc7ht8vm/7EN84uqnMvBxw2i7Yk2o5e/b700d1d760954f829b003d01a4a4352a/image.png",
+        "name": "Finwire"
+      },
+      "articleMarkdownText": "**Rubrik**\n\nFörsta stycket.\n\nAndra stycket med [en länk](https://example.test).",
+      "headline": "Fyra bolag på Nasdaq Stockholm, däribland Investor, handlas i dag exklusive utdelning",
+      "id": "f869a8cb-42a0-4a39-94a1-c0e76f41444f",
+      "instruments": [],
+      "language": "sv",
+      "newsType": "NEWS",
+      "newsTypeName": "Nyheter",
+      "published": 1793941802000,
+      "tags": ["SE", "WORLD", "DIVIDEND", "FINANCIALS", "LARGE_CAP", "EUROPE"],
+      "views": 0
+    }
+  }
+}

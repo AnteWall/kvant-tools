@@ -1,0 +1,174 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/holdings/historical-returns/v2/own-capital/graph",
+    "body": {
+      "accountIds": ["00000000-0000-4000-8000-000000000001"],
+      "fromDate": "2026-01-01",
+      "toDate": "2026-01-04"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "currencyCode": "SEK",
+      "returns": [
+        {
+          "d": "2026-01-02",
+          "rM": 0,
+          "rMA": 0,
+          "rP": 0,
+          "rPA": 0,
+          "oC": 1000,
+          "mV": 900,
+          "b": 100,
+          "cNF": 1000
+        },
+        {
+          "d": "2026-01-03",
+          "rM": 10,
+          "rMA": 10,
+          "rP": 1,
+          "rPA": 1,
+          "oC": 1010,
+          "mV": 910,
+          "b": 100,
+          "cNF": 0
+        },
+        {
+          "d": "2026-01-04",
+          "rM": -5,
+          "rMA": 5,
+          "rP": -0.5,
+          "rPA": 0.5,
+          "oC": 1005,
+          "mV": 905,
+          "b": 100,
+          "cNF": 0
+        }
+      ],
+      "periodReturns": [
+        {
+          "period": "DAY_1",
+          "monetaryReturn": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          },
+          "percentageReturn": 0.5,
+          "ownCapitalChange": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          }
+        },
+        {
+          "period": "WEEK_1",
+          "monetaryReturn": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          },
+          "percentageReturn": 0.5,
+          "ownCapitalChange": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          }
+        },
+        {
+          "period": "MONTH_1",
+          "monetaryReturn": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          },
+          "percentageReturn": 0.5,
+          "ownCapitalChange": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          }
+        },
+        {
+          "period": "MONTH_3",
+          "monetaryReturn": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          },
+          "percentageReturn": 0.5,
+          "ownCapitalChange": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          }
+        },
+        {
+          "period": "MONTH_6",
+          "monetaryReturn": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          },
+          "percentageReturn": 0.5,
+          "ownCapitalChange": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          }
+        },
+        {
+          "period": "YTD",
+          "monetaryReturn": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          },
+          "percentageReturn": 0.5,
+          "ownCapitalChange": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          }
+        },
+        {
+          "period": "YEAR_1",
+          "monetaryReturn": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          },
+          "percentageReturn": 0.5,
+          "ownCapitalChange": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          }
+        },
+        {
+          "period": "YEAR_3",
+          "monetaryReturn": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          },
+          "percentageReturn": 0.5,
+          "ownCapitalChange": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          }
+        },
+        {
+          "period": "YEAR_5",
+          "monetaryReturn": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          },
+          "percentageReturn": 0.5,
+          "ownCapitalChange": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          }
+        },
+        {
+          "period": "ALL",
+          "monetaryReturn": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          },
+          "percentageReturn": 0.5,
+          "ownCapitalChange": {
+            "currencyCode": "SEK",
+            "value": 5.0
+          }
+        }
+      ]
+    }
+  }
+}

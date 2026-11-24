@@ -1,0 +1,139 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/holdings/positions/v2/positions",
+    "body": {
+      "accountIds": ["00000000-0000-4000-8000-000000000001"]
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "fundPositions": [],
+      "fundSummary": {
+        "acquisitionCost": {
+          "currencyCode": "",
+          "value": 0
+        },
+        "marketValue": {
+          "currencyCode": "",
+          "value": 0
+        },
+        "returnMonetary": {
+          "currencyCode": "",
+          "value": 0
+        },
+        "returnPercentage": 0
+      },
+      "exchangeTradedPositions": [
+        {
+          "accountId": "00000000-0000-4000-8000-000000000001",
+          "custodyInstrumentId": "00000000-0000-4000-8000-0000000000c1",
+          "tradingOrderBookId": "00000000-0000-4000-8000-0000000000c2",
+          "marketDataOrderBookId": "00000000-0000-4000-8000-0000000000c3",
+          "instrumentName": "Investor AB ser. B",
+          "legacyInstrumentId": 16102308,
+          "backofficeInstrumentId": 1000001,
+          "legacyMarketId": 11,
+          "acquisitionCost": {
+            "inInstrumentCurrency": {
+              "currencyCode": "SEK",
+              "value": 3000
+            },
+            "inAccountCurrency": {
+              "currencyCode": "SEK",
+              "value": 3000
+            }
+          },
+          "averageAcquisitionCost": {
+            "inInstrumentCurrency": {
+              "currencyCode": "SEK",
+              "value": 300
+            },
+            "inAccountCurrency": {
+              "currencyCode": "SEK",
+              "value": 300
+            }
+          },
+          "customAcquisitionCost": false,
+          "marketValue": {
+            "inInstrumentCurrency": {
+              "currencyCode": "SEK",
+              "value": 3100
+            },
+            "inAccountCurrency": {
+              "currencyCode": "SEK",
+              "value": 3100
+            }
+          },
+          "returnMonetary": {
+            "inInstrumentCurrency": {
+              "currencyCode": "SEK",
+              "value": 100
+            },
+            "inAccountCurrency": {
+              "currencyCode": "SEK",
+              "value": 100
+            }
+          },
+          "quantity": 10,
+          "reservedQuantity": 0,
+          "returnPercentage": 3.33,
+          "returnPercentages": {
+            "inInstrumentCurrency": 3.33,
+            "inAccountCurrency": 3.33
+          },
+          "price": {
+            "currencyCode": "SEK",
+            "value": 310
+          },
+          "priceDate": "2026-01-02",
+          "instrumentOneDayReturn": 1.2,
+          "instrumentOneDayReturnMonetary": {
+            "currencyCode": "SEK",
+            "value": 3.67
+          },
+          "isin": "SE0015811963",
+          "isMutualFund": false,
+          "isFuture": false,
+          "isGbx": false,
+          "iconUrl": "https://example.test/icon.png",
+          "displaySlug": "investor-b-inve-b-xsto",
+          "instrumentClass": "STOCK",
+          "assetType": "STOCK",
+          "marginPercentage": 100
+        }
+      ],
+      "exchangeTradedSummary": {
+        "acquisitionCost": {
+          "currencyCode": "SEK",
+          "value": 3000
+        },
+        "marketValue": {
+          "currencyCode": "SEK",
+          "value": 3100
+        },
+        "returnMonetary": {
+          "currencyCode": "SEK",
+          "value": 100
+        },
+        "returnPercentage": 3.33
+      },
+      "totalSummary": {
+        "acquisitionCost": {
+          "currencyCode": "SEK",
+          "value": 3000
+        },
+        "marketValue": {
+          "currencyCode": "SEK",
+          "value": 3100
+        },
+        "returnMonetary": {
+          "currencyCode": "SEK",
+          "value": 100
+        },
+        "returnPercentage": 3.33
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/holdings/positions/v2/positions",
+    "body": {
+      "accountIds": ["00000000-0000-4000-8000-000000000001"]
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "fundPositions": [],
+      "fundSummary": {
+        "acquisitionCost": {
+          "currencyCode": "",
+          "value": 0.0
+        },
+        "marketValue": {
+          "currencyCode": "",
+          "value": 0.0
+        },
+        "returnMonetary": {
+          "currencyCode": "",
+          "value": 0.0
+        },
+        "returnPercentage": 0
+      },
+      "exchangeTradedPositions": [],
+      "exchangeTradedSummary": {
+        "acquisitionCost": {
+          "currencyCode": "",
+          "value": 0.0
+        },
+        "marketValue": {
+          "currencyCode": "",
+          "value": 0.0
+        },
+        "returnMonetary": {
+          "currencyCode": "",
+          "value": 0.0
+        },
+        "returnPercentage": 0
+      },
+      "totalSummary": {
+        "acquisitionCost": {
+          "currencyCode": "",
+          "value": 0.0
+        },
+        "marketValue": {
+          "currencyCode": "",
+          "value": 0.0
+        },
+        "returnMonetary": {
+          "currencyCode": "",
+          "value": 0.0
+        },
+        "returnPercentage": 0
+      }
+    }
+  }
+}

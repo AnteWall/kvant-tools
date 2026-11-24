@@ -1,0 +1,84 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/company-data/v2/corporate-actions/order-books/cd36c82c-da5f-4a7e-8be5-70d64b6f1853/dividends"
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "orderBookId": "cd36c82c-da5f-4a7e-8be5-70d64b6f1853",
+      "dividendEvents": [
+        {
+          "id": "a4c44ece-5abe-342f-a250-b84f8d0638fd",
+          "source": {
+            "source": "FACTSET",
+            "displayName": "FactSet",
+            "sourcedAt": "2026-11-09T03:50:40.525756Z"
+          },
+          "amount": {
+            "value": 1.6,
+            "currency": "SEK"
+          },
+          "xDate": "2026-11-06",
+          "orderBookId": "cd36c82c-da5f-4a7e-8be5-70d64b6f1853",
+          "recordDate": "2026-11-09",
+          "paymentDate": "2026-11-12",
+          "eventType": {
+            "value": "REGULAR_PAYMENT",
+            "displayName": "regular_payment"
+          },
+          "status": "UPCOMING_PAYMENT_DATE"
+        },
+        {
+          "id": "b66c03b3-c9ed-3b47-868b-9444eb802c53",
+          "source": {
+            "source": "FACTSET",
+            "displayName": "FactSet",
+            "sourcedAt": "2026-11-09T03:50:40.525756Z"
+          },
+          "amount": {
+            "value": 4,
+            "currency": "SEK"
+          },
+          "xDate": "2026-05-08",
+          "orderBookId": "cd36c82c-da5f-4a7e-8be5-70d64b6f1853",
+          "recordDate": "2026-05-11",
+          "paymentDate": "2026-05-15",
+          "eventType": {
+            "value": "REGULAR_PAYMENT",
+            "displayName": "regular_payment"
+          },
+          "status": "PAST_PAYMENT_DATE"
+        }
+      ],
+      "currentDividendEvent": {
+        "id": "a4c44ece-5abe-342f-a250-b84f8d0638fd",
+        "source": {
+          "source": "FACTSET",
+          "displayName": "FactSet",
+          "sourcedAt": "2026-11-09T03:50:40.525756Z"
+        },
+        "amount": {
+          "value": 1.6,
+          "currency": "SEK"
+        },
+        "xDate": "2026-11-06",
+        "orderBookId": "cd36c82c-da5f-4a7e-8be5-70d64b6f1853",
+        "recordDate": "2026-11-09",
+        "paymentDate": "2026-11-12",
+        "eventType": {
+          "value": "REGULAR_PAYMENT",
+          "displayName": "regular_payment"
+        },
+        "status": "UPCOMING_PAYMENT_DATE"
+      },
+      "sources": [
+        {
+          "source": "FACTSET",
+          "displayName": "FactSet",
+          "sourcedAt": "2026-11-09T03:50:40.525756Z"
+        }
+      ]
+    }
+  }
+}

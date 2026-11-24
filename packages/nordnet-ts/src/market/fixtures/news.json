@@ -1,0 +1,79 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/news/v1/news/preview/instrument/19fa390b-040f-45a9-8fa2-e7fd34e319ab?offset=0&limit=20"
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "excluded": {},
+      "limit": 5,
+      "news": [
+        {
+          "agency": {
+            "id": "FINWIRE_MAIN",
+            "logoLink": "https://cdn.prod.nntech.io/cms-proxy/s4yelc7ht8vm/7EN84uqnMvBxw2i7Yk2o5e/b700d1d760954f829b003d01a4a4352a/image.png",
+            "name": "Finwire"
+          },
+          "headline": "Fyra bolag på Nasdaq Stockholm, däribland Investor, handlas i dag exklusive utdelning",
+          "id": "f869a8cb-42a0-4a39-94a1-c0e76f41444f",
+          "instrumentIds": [
+            "a4c39b51-2e5f-493e-9c5b-26f67387d31c",
+            "ad45e4f9-0f57-4463-b164-5a34e95cabc3",
+            "f4d2e221-efc2-4bfe-a91b-4ce8ade051f4",
+            "bc6ed1a8-be69-436c-afa6-213025fc173e",
+            "a30ef386-a3e6-401a-9527-58bc2d6b1b81",
+            "78ab4183-131d-463e-b331-a752cb4b1453",
+            "19fa390b-040f-45a9-8fa2-e7fd34e319ab",
+            "11398261-f265-42e1-aba2-fd6e6c08607e"
+          ],
+          "instruments": [],
+          "intro": "Fyra bolag på Nasdaq Stockholm, däribland investmentbolaget Investor, handlas i dag den 6 november exklusive rätt till utdelning, enligt följande belopp. \\* BTS 2,20 kronor per aktie (utdelningen är 4,40 kronor i årstakt)...",
+          "language": "sv",
+          "newsType": "NEWS",
+          "newsTypeName": "Nyheter",
+          "published": 1793941802000,
+          "tags": ["EUROPE", "SE", "DIVIDEND", "FINANCIALS", "LARGE_CAP", "WORLD"],
+          "views": 409
+        },
+        {
+          "agency": {
+            "id": "FINWIRE_MAIN",
+            "logoLink": "https://cdn.prod.nntech.io/cms-proxy/s4yelc7ht8vm/7EN84uqnMvBxw2i7Yk2o5e/b700d1d760954f829b003d01a4a4352a/image.png",
+            "name": "Finwire"
+          },
+          "headline": "Nordic Compass vill skapa nordisk miljardfond och gemensam kapitalmarknad",
+          "id": "5d361c59-5529-4f5a-b0af-bb4efb59a522",
+          "instrumentIds": [
+            "c8ca922b-3858-4a6b-b822-37b72312aad0",
+            "879b07f1-662f-40fb-ac01-cce15b554ea1",
+            "b7c60c39-3b15-44ef-9fe2-5f28e379c80a",
+            "31a237ac-8328-4b73-93e1-b9b6e1706352",
+            "62f43895-df06-4885-80c0-f8f28ed1dc13",
+            "e7205822-9b8d-47f0-bc27-b7d6071e424e",
+            "8efe4552-0fc6-4210-bbe5-80e697205af5",
+            "1209a363-1052-4c61-ac6e-5cba171c325a",
+            "1087d3e0-b4fb-4e84-9e31-92df8f9a801d",
+            "d201a545-c8e8-476e-a25e-3c96a671544b",
+            "bc6ed1a8-be69-436c-afa6-213025fc173e",
+            "914e89d0-3f19-4a8b-ab73-23df367e9bac",
+            "92edf787-6840-4a88-a648-cd300baa7bc5",
+            "19fa390b-040f-45a9-8fa2-e7fd34e319ab",
+            "f7dc7b4c-b5b4-41a7-ab43-794ec99aeab6"
+          ],
+          "instruments": [],
+          "intro": "Industrialliansen Nordic Compass, som samlar 30 av Nordens största företag, håller sitt första toppmöte i Göteborg. Bland näringslivsaktörer som är på plats är Investors ordförande Jacob Wallenberg och Akers koncernchef Øyvind Eriksen...",
+          "language": "sv",
+          "newsType": "NEWS",
+          "newsTypeName": "Nyheter",
+          "originalArticleLink": "https://e24.no/boers-og-finans/i/Ab6pyA/nordic-compass-vil-lage-nordisk-gigafond",
+          "published": 1793872627000,
+          "tags": ["EUROPE", "FI", "SE", "FINANCIALS", "NO", "LARGE_CAP", "DK", "TECH", "WORLD"],
+          "views": 408
+        }
+      ],
+      "offset": 0,
+      "total": 10
+    }
+  }
+}

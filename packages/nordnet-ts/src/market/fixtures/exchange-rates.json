@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/2/exchange_rates"
+  },
+  "response": {
+    "status": 200,
+    "body": [
+      {
+        "from": "EUR",
+        "to": "CHF",
+        "value": 0.916969
+      },
+      {
+        "from": "CHF",
+        "to": "CAD",
+        "value": 1.7219
+      },
+      {
+        "from": "CHF",
+        "to": "DKK",
+        "value": 8.15185
+      }
+    ]
+  }
+}

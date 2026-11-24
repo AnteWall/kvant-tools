@@ -1,0 +1,39 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/instrument-screening/v1/indicator/web/omxs30"
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "countryCode": "SE",
+      "instrumentId": "793909eb-2344-4a77-92c4-2c6aa84980fd",
+      "isin": "SE0000337842",
+      "name": "OMX Stockholm 30",
+      "orderBookId": "96c0a6c2-fbcf-44fc-a535-a45b1a1b86c3",
+      "price": {
+        "absoluteDevelopment": 37.22,
+        "accessType": "REALTIME",
+        "close": 3267.88,
+        "development": 1.14,
+        "high": 3305.14,
+        "last": 3305.1,
+        "low": 3261.64,
+        "orderBookId": "96c0a6c2-fbcf-44fc-a535-a45b1a1b86c3",
+        "orderBookStatus": "CONTINUOUS_TRADING",
+        "priceSource": "MORNINGSTAR",
+        "timestamp": 1794232536100
+      },
+      "slug": {
+        "displaySlug": "omxs30",
+        "instrumentClass": "INDICATOR",
+        "instrumentId": "793909eb-2344-4a77-92c4-2c6aa84980fd",
+        "isNordnetMarkets": false,
+        "legacyInstrumentId": null,
+        "orderBookId": "96c0a6c2-fbcf-44fc-a535-a45b1a1b86c3"
+      },
+      "symbol": "OMXS30",
+      "type": "INDEX"
+    }
+  }
+}

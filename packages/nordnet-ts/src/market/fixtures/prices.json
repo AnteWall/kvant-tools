@@ -1,0 +1,31 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/2/instruments/price/16102308"
+  },
+  "response": {
+    "status": 200,
+    "body": [
+      {
+        "instrument_id": 16102308,
+        "delay": 0,
+        "tick_timestamp": 1794232493469,
+        "trade_timestamp": 1794232493014,
+        "bid": 429.15,
+        "bid_volume": 589,
+        "ask": 429.25,
+        "ask_volume": 992,
+        "last": 429.15,
+        "last_volume": 97,
+        "high": 430,
+        "low": 426.25,
+        "open": 426.9,
+        "close": 428.15,
+        "vwap": 427.99,
+        "turnover": 465483976.27,
+        "turnover_volume": 1087615,
+        "lot_size": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/company-data/v1/key-figures/instruments/cd36c82c-da5f-4a7e-8be5-70d64b6f1853"
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "keyFigures": [
+        {
+          "currency": "SEK",
+          "displayName": "Börsvärde",
+          "orderBookId": "cd36c82c-da5f-4a7e-8be5-70d64b6f1853",
+          "instrumentId": "19fa390b-040f-45a9-8fa2-e7fd34e319ab",
+          "points": [
+            {
+              "value": 712693694465.5,
+              "pointType": "PAST",
+              "fiscalPeriod": "2023",
+              "displayName": "2023",
+              "period": "2023"
+            },
+            {
+              "value": 895925889481.1,
+              "pointType": "PAST",
+              "fiscalPeriod": "2024",
+              "displayName": "2024",
+              "period": "2024"
+            }
+          ],
+          "currentValue": 1301817836668.7,
+          "keyFigureType": "MARKET_CAPITALIZATION",
+          "sources": [
+            {
+              "source": "Factset",
+              "displayName": "FactSet",
+              "timestamp": "2026-11-09T03:51:02.022302Z"
+            }
+          ],
+          "shortSaleHolders": [],
+          "contentfulKey": "historical-key-figures-faq-market-capitalization",
+          "graphType": "BAR",
+          "keyFigurePath": "/company-data/v1/key-figures/market-capitalization/instruments",
+          "keyFigureTypeId": "market-capitalization",
+          "numberOfDecimals": 0,
+          "unit": "CURRENCY"
+        },
+        {
+          "currency": "SEK",
+          "displayName": "Omsättning",
+          "orderBookId": "cd36c82c-da5f-4a7e-8be5-70d64b6f1853",
+          "instrumentId": "19fa390b-040f-45a9-8fa2-e7fd34e319ab",
+          "points": [
+            {
+              "value": 70699000000,
+              "pointType": "PAST",
+              "fiscalPeriod": "2022",
+              "displayName": "2022",
+              "period": "2022"
+            },
+            {
+              "value": 69927000000,
+              "pointType": "PAST",
+              "fiscalPeriod": "2023",
+              "displayName": "2023",
+              "period": "2023"
+            }
+          ],
+          "currentValue": 83716000000,
+          "keyFigureType": "REVENUE",
+          "sources": [
+            {
+              "source": "Factset",
+              "displayName": "FactSet",
+              "timestamp": "2026-11-09T03:51:02.022302Z"
+            }
+          ],
+          "shortSaleHolders": [],
+          "contentfulKey": "historical-key-figures-faq-revenue",
+          "graphType": "BAR",
+          "keyFigurePath": "/company-data/v1/key-figures/revenue/instruments",
+          "keyFigureTypeId": "revenue",
+          "numberOfDecimals": 0,
+          "unit": "CURRENCY"
+        }
+      ]
+    }
+  }
+}

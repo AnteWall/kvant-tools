@@ -1,0 +1,24 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/2/accounts"
+  },
+  "response": {
+    "status": 200,
+    "body": [
+      {
+        "accno": 12345678,
+        "accid": 1,
+        "account_id": "00000000-0000-4000-8000-000000000001",
+        "bank_accno": "90000000001",
+        "type": "Investeringssparkonto",
+        "atyid": 125,
+        "symbol": "ISK",
+        "account_code": "ISK",
+        "role": "OWNER",
+        "default": true,
+        "alias": "Synthetic ISK"
+      }
+    ]
+  }
+}

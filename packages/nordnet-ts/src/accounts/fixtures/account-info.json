@@ -1,0 +1,110 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/2/accounts/1/info"
+  },
+  "response": {
+    "status": 200,
+    "body": [
+      {
+        "account_credit": {
+          "currency": "SEK",
+          "value": 1000.0
+        },
+        "collateral": {
+          "currency": "SEK",
+          "value": 1000.0
+        },
+        "pawn_value": {
+          "currency": "SEK",
+          "value": 1000.0
+        },
+        "trading_power": {
+          "currency": "SEK",
+          "value": 1000.0
+        },
+        "short_positions_margin": {
+          "currency": "SEK",
+          "value": 1000.0
+        },
+        "buy_orders_value": {
+          "currency": "SEK",
+          "value": 1000.0
+        },
+        "reserved": {
+          "corporate_actions": {
+            "currency": "SEK",
+            "value": 1000.0
+          },
+          "fund_orders": {
+            "currency": "SEK",
+            "value": 1000.0
+          },
+          "monthly_savings_exchange_traded": {
+            "currency": "SEK",
+            "value": 1000.0
+          },
+          "other": {
+            "currency": "SEK",
+            "value": 1000.0
+          },
+          "tax": {
+            "currency": "SEK",
+            "value": 1000.0
+          },
+          "total": {
+            "currency": "SEK",
+            "value": 1000.0
+          }
+        },
+        "loan_limit": {
+          "currency": "SEK",
+          "value": 1000.0
+        },
+        "forward_sum": {
+          "currency": "SEK",
+          "value": 1000.0
+        },
+        "future_sum": {
+          "currency": "SEK",
+          "value": 1000.0
+        },
+        "account_currency": "SEK",
+        "interest": {
+          "currency": "SEK",
+          "value": 1000.0
+        },
+        "account_sum": {
+          "currency": "SEK",
+          "value": 1000.0
+        },
+        "unrealized_future_profit_loss": {
+          "currency": "SEK",
+          "value": 1000.0
+        },
+        "own_capital": {
+          "value": 1000.0,
+          "currency": "SEK"
+        },
+        "own_capital_morning": {
+          "currency": "SEK",
+          "value": 1000.0
+        },
+        "full_marketvalue": {
+          "currency": "SEK",
+          "value": 1000.0
+        },
+        "account_code": "DEP",
+        "bank_accno": "90000000001",
+        "interest_rate": 0.0,
+        "registration_date": "2020-01-01",
+        "accno": 12345678,
+        "accid": 1,
+        "equity": {
+          "value": 1000.0,
+          "currency": "SEK"
+        }
+      }
+    ]
+  }
+}

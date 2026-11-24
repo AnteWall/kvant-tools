@@ -1,0 +1,17 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/market-data/v3/price-time-series/returns/lastday?identifiers=cd36c82c-da5f-4a7e-8be5-70d64b6f1853"
+  },
+  "response": {
+    "status": 200,
+    "body": [
+      {
+        "id": "cd36c82c-da5f-4a7e-8be5-70d64b6f1853",
+        "development": 0.23,
+        "absoluteDevelopment": 1,
+        "lastPrice": 429.15
+      }
+    ]
+  }
+}

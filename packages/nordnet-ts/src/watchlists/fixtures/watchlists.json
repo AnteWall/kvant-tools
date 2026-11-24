@@ -1,0 +1,24 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/personalization/v1/my-watchlists"
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "isFull": false,
+      "maxListsAllowed": 100,
+      "numberOfLists": 1,
+      "watchlists": [
+        {
+          "hasOrderBook": false,
+          "id": "00000000-0000-4000-8000-0000000000aa",
+          "isFull": false,
+          "maxInstrumentsAllowed": 300,
+          "name": "Synthetic list",
+          "numberOfInstruments": 2
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/market-data/v3/price-time-series/period/MONTH_1/identifier/cd36c82c-da5f-4a7e-8be5-70d64b6f1853"
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "timeSeriesIdentifier": "cd36c82c-da5f-4a7e-8be5-70d64b6f1853",
+      "pricePoints": [
+        {
+          "timeStamp": 1791529200000,
+          "high": 412.8,
+          "low": 409.15,
+          "open": 409.15,
+          "last": 412.7,
+          "volume": 457199
+        },
+        {
+          "timeStamp": 1791532800000,
+          "high": 412.9,
+          "low": 411.1,
+          "open": 412.8,
+          "last": 411.75,
+          "volume": 157864
+        },
+        {
+          "timeStamp": 1791536400000,
+          "high": 412.2,
+          "low": 411.4,
+          "open": 411.75,
+          "last": 411.8,
+          "volume": 70179
+        }
+      ],
+      "previousClose": 406.55,
+      "high": 439.6,
+      "low": 407.55,
+      "comparePricePoints": [],
+      "technicalAnalysisPoints": [],
+      "validResolutionsForPeriod": ["HOUR_1", "HOUR_4", "DAY"],
+      "availablePeriods": [
+        "DAY_1",
+        "WEEK_1",
+        "MONTH_1",
+        "MONTH_3",
+        "MONTH_6",
+        "YTD",
+        "YEAR_1",
+        "YEAR_3",
+        "YEAR_5",
+        "YEAR_10",
+        "ALL"
+      ],
+      "supportedTechnicalAnalysisPointsTypes": [
+        "SMA",
+        "EMA",
+        "RSI",
+        "STOCHASTIC",
+        "BOLLINGER",
+        "MACD"
+      ],
+      "enrichPoints": [],
+      "returnedResolution": "HOUR_1",
+      "returnedPeriod": "MONTH_1",
+      "returns": {
+        "DAY_1": 0.23,
+        "WEEK_1": 0.48,
+        "MONTH_1": 5.56,
+        "MONTH_3": 1.29,
+        "MONTH_6": 16.16,
+        "YTD": 29.89,
+        "YEAR_1": 37.28,
+        "YEAR_3": 107.52,
+        "YEAR_5": 106.07,
+        "YEAR_10": 448.79,
+        "ALL": 2059.25
+      }
+    }
+  }
+}

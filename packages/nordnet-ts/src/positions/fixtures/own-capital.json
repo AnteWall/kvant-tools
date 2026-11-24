@@ -1,0 +1,77 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/holdings/own-capital/v2/own-capital",
+    "body": {
+      "accountIds": ["00000000-0000-4000-8000-000000000001"]
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "ownCapitalTotal": {
+        "balance": {
+          "currencyCode": "SEK",
+          "value": 1000.0
+        },
+        "creditBalance": {
+          "currencyCode": "SEK",
+          "value": 1000.0
+        },
+        "creditInterest": {
+          "currencyCode": "SEK",
+          "value": 1000.0
+        },
+        "marketValue": {
+          "currencyCode": "SEK",
+          "value": 1000.0
+        },
+        "interest": {
+          "currencyCode": "SEK",
+          "value": 1000.0
+        },
+        "futureSum": {
+          "currencyCode": "SEK",
+          "value": 1000.0
+        },
+        "forwardSum": {
+          "currencyCode": "SEK",
+          "value": 1000.0
+        },
+        "ownCapital": {
+          "currencyCode": "SEK",
+          "value": 1000.0
+        }
+      },
+      "ownCapitalPerAccount": [
+        {
+          "accountId": "00000000-0000-4000-8000-000000000001",
+          "balance": {
+            "currencyCode": "SEK",
+            "value": 1000.0
+          },
+          "marketValue": {
+            "currencyCode": "SEK",
+            "value": 1000.0
+          },
+          "interest": {
+            "currencyCode": "SEK",
+            "value": 1000.0
+          },
+          "futureSum": {
+            "currencyCode": "SEK",
+            "value": 1000.0
+          },
+          "forwardSum": {
+            "currencyCode": "SEK",
+            "value": 1000.0
+          },
+          "ownCapital": {
+            "currencyCode": "SEK",
+            "value": 1000.0
+          }
+        }
+      ]
+    }
+  }
+}

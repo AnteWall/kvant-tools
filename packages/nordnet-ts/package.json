@@ -1,0 +1,41 @@
+{
+  "name": "nordnet-ts",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for Nordnet's web API",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnteWall/avanza-ts.git",
+    "directory": "packages/nordnet-ts"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "dev": "tsc --build --watch --preserveWatchOutput",
+    "prepack": "pnpm build",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc --build"
+  },
+  "dependencies": {
+    "tough-cookie": "^6.0.2"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  }
+}

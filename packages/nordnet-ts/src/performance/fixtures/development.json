@@ -1,0 +1,29 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/holdings/historical-returns/v2/own-capital/development-by-period",
+    "body": {
+      "accountIds": ["00000000-0000-4000-8000-000000000001"],
+      "period": "YEAR_1"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "accountDevelopments": [
+        {
+          "accountId": "00000000-0000-4000-8000-000000000001",
+          "accountNumber": 12345678,
+          "currencyCode": "SEK",
+          "returnPercentage": 1.25,
+          "returnMonetary": 12.5
+        }
+      ],
+      "totalReturnMonetary": {
+        "currencyCode": "SEK",
+        "value": 12.5
+      },
+      "totalReturnPercentage": 1.25
+    }
+  }
+}

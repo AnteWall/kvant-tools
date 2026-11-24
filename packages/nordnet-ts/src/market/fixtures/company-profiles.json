@@ -1,0 +1,81 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/company-data/v1/company-profile/instruments?instrumentIds=19fa390b-040f-45a9-8fa2-e7fd34e319ab"
+  },
+  "response": {
+    "status": 200,
+    "body": [
+      {
+        "isin": "SE0015811963",
+        "instrumentId": "19fa390b-040f-45a9-8fa2-e7fd34e319ab",
+        "companyIdentity": {
+          "companyName": "Investor AB",
+          "businessDescription": "Investor AB är ett investmentbolag som engagerar sig i ett långsiktigt investeringsperspektiv. Det verkar genom följande segment: Börsnoterade bolag, Patricia Industries, Investeringar i EQT och Investor Groupwide. Företaget grundades 1916 och har sitt huvudkontor i Stockholm, Sverige.",
+          "websiteUrl": "http://www.investorab.com",
+          "email": "magnus.dalhammar@investorab.com",
+          "ceo": "Ulf Christian Cederholm"
+        },
+        "address": {
+          "address": "Arsenalsgatan 8C",
+          "city": "Stockholm",
+          "stateProvince": "Stockholm",
+          "postalCode": "103 32",
+          "country": "Sverige"
+        },
+        "headquartersCountryCode": "SE",
+        "riskCountryCode": "SE",
+        "marketInfo": {
+          "publicShares": 1821936744,
+          "commonSharesOutstandingBasic": 3063715066,
+          "commonSharesOutstandingDiluted": 3063715066
+        },
+        "classification": {
+          "economy": {
+            "displayName": "Finans",
+            "economy": "FINANCIAL_SERVICES",
+            "translations": {
+              "de": "Finanzdienstleistungen",
+              "no": "Finans",
+              "sv": "Finans",
+              "da": "Finans",
+              "en": "Financial services",
+              "fi": "Rahoituspalvelut"
+            }
+          },
+          "sector": {
+            "displayName": "Finans",
+            "sector": "FINANCIAL_SERVICES",
+            "translations": {
+              "de": "Finanzdienstleistungen",
+              "no": "Finans",
+              "sv": "Finans",
+              "da": "Finans",
+              "en": "Financial services",
+              "fi": "Rahoituspalvelut"
+            }
+          },
+          "industry": {
+            "displayName": "Finansiella Konglomerat",
+            "industry": "FINANCIAL_CONGLOMERATES",
+            "translations": {
+              "de": "Finanzkonglomerate",
+              "no": "Finansielle konglomerater",
+              "sv": "Finansiella Konglomerat",
+              "da": "Finansielle Konglomerater",
+              "en": "Financial Conglomerates",
+              "fi": "Finanssialan konglomeraatit"
+            }
+          }
+        },
+        "sources": [
+          {
+            "source": "FactSet",
+            "displayName": "FactSet",
+            "retrievedAt": "2026-11-06T19:56:49.212764Z"
+          }
+        ]
+      }
+    ]
+  }
+}
