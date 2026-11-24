@@ -2,10 +2,14 @@ import { readFile, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const output = fileURLToPath(new URL('../content/docs/sdk/reference/generated/', import.meta.url));
+// Usage: node scripts/prepare-sdk-reference.mjs <docs section> <client class>, e.g. `sdk AvanzaClient`.
+const [section = 'sdk', clientClass = 'AvanzaClient'] = process.argv.slice(2);
+const output = fileURLToPath(
+  new URL(`../content/docs/${section}/reference/generated/`, import.meta.url),
+);
 const pages = (await readdir(output, { recursive: true })).filter((file) => file.endsWith('.md'));
-if (!pages.includes('index.md') || !pages.includes('classes/AvanzaClient.md')) {
-  throw new Error('TypeDoc did not generate the SDK public API reference.');
+if (!pages.includes('index.md') || !pages.includes(`classes/${clientClass}.md`)) {
+  throw new Error(`TypeDoc did not generate the ${section} public API reference.`);
 }
 
 await Promise.all(

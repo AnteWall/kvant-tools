@@ -4,8 +4,9 @@ export function baseOptions(): BaseLayoutProps {
   return {
     nav: { title: 'Kvant Tools' },
     links: [
-      { text: 'SDK', url: '/docs/sdk', active: 'nested-url' },
-      { text: 'CLI', url: '/docs/cli', active: 'nested-url' },
+      { text: 'Avanza SDK', url: '/docs/sdk', active: 'nested-url' },
+      { text: 'Avanza CLI', url: '/docs/cli', active: 'nested-url' },
+      { text: 'Nordnet SDK', url: '/docs/nordnet', active: 'nested-url' },
     ],
   };
 }

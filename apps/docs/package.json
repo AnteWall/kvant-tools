@@ -7,7 +7,7 @@
     "build": "pnpm generate:cli && pnpm generate:sdk && next build && node scripts/check-links.mjs",
     "dev": "pnpm generate:cli && pnpm generate:sdk && next dev",
     "generate:cli": "pnpm --dir ../../packages/avanza-cli build && node scripts/generate-cli.mjs",
-    "generate:sdk": "typedoc --options typedoc.json && node scripts/prepare-sdk-reference.mjs",
+    "generate:sdk": "typedoc --options typedoc.json && node scripts/prepare-sdk-reference.mjs sdk AvanzaClient && typedoc --options typedoc.nordnet.json && node scripts/prepare-sdk-reference.mjs nordnet NordnetClient",
     "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {

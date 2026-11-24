@@ -1,6 +1,6 @@
 # @kvant-dev/avanza-cli
 
-Command-line interface for `@kvant-dev/avanza`. Install with `npm install -g @kvant-dev/avanza-cli` (macOS, Linux, Windows) or `brew install AnteWall/tap/avanza-tools` (macOS, Linux), then run `avanza`.
+Command-line interface for `@kvant-dev/avanza`. Install with `npm install -g @kvant-dev/avanza-cli` (macOS, Linux, Windows) or `brew install AnteWall/tap/kvant-tools` (macOS, Linux), then run `avanza`.
 
 ## Agent skill
 

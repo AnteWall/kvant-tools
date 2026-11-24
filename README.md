@@ -3,10 +3,11 @@
 > [!NOTE]
 > **Renamed:** this repository was previously `avanza-ts`. The packages now live under the `@kvant-dev` npm scope:
 >
-> | Before               | Now                     |
-> | -------------------- | ----------------------- |
-> | `avanza-ts`          | `@kvant-dev/avanza`     |
-> | `avanza-tools` (CLI) | `@kvant-dev/avanza-cli` |
+> | Before                                   | Now                                     |
+> | ---------------------------------------- | --------------------------------------- |
+> | `avanza-ts`                              | `@kvant-dev/avanza`                     |
+> | `avanza-tools` (CLI)                     | `@kvant-dev/avanza-cli`                 |
+> | `brew install AnteWall/tap/avanza-tools` | `brew install AnteWall/tap/kvant-tools` |
 >
 > The API and the `avanza` command are unchanged. Update your dependency and imports to the new names; `avanza-ts` and `avanza-tools` will no longer receive updates.
 
@@ -17,13 +18,13 @@
 
 Unofficial TypeScript SDKs and command-line tools for Nordic brokers: Avanza (`@kvant-dev/avanza`, `@kvant-dev/avanza-cli`) and Nordnet (`@kvant-dev/nordnet`).
 
-**Documentation:** [SDK guide](https://antewall.github.io/kvant-tools/docs/sdk/) · [CLI guide](https://antewall.github.io/kvant-tools/docs/cli/) · [Full documentation](https://antewall.github.io/kvant-tools/)
+**Documentation:** [Avanza SDK](https://antewall.github.io/kvant-tools/docs/sdk/) · [Avanza CLI](https://antewall.github.io/kvant-tools/docs/cli/) · [Nordnet SDK](https://antewall.github.io/kvant-tools/docs/nordnet/) · [Full documentation](https://antewall.github.io/kvant-tools/)
 
 **For AI agents:** [llms.txt](https://antewall.github.io/kvant-tools/llms.txt) · [Full Markdown docs](https://antewall.github.io/kvant-tools/llms-full.txt)
 
 Requires Node.js 22.12 or newer.
 
-## TypeScript SDK — `@kvant-dev/avanza`
+## Avanza TypeScript SDK — `@kvant-dev/avanza`
 
 Use the SDK in a Node.js application to access Avanza market data and authenticated account features.
 
@@ -41,7 +42,7 @@ console.log(results);
 
 Public market requests work without signing in. See the [SDK getting-started guide](https://antewall.github.io/kvant-tools/docs/sdk/getting-started) for more.
 
-## CLI — `@kvant-dev/avanza-cli`
+## Avanza CLI — `@kvant-dev/avanza-cli`
 
 Install the `avanza` command on macOS, Linux, or Windows:
 
@@ -50,7 +51,7 @@ npm install --global @kvant-dev/avanza-cli
 avanza market search --query volvo --limit 5
 ```
 
-On macOS or Linux, you can also install with Homebrew: `brew install AnteWall/tap/avanza-tools`.
+On macOS or Linux, you can also install with Homebrew: `brew install AnteWall/tap/kvant-tools`.
 
 To use the CLI with an AI agent, install the skill in your project:
 
@@ -60,9 +61,27 @@ npx skills add AnteWall/kvant-tools --skill avanza-cli
 
 See the [CLI getting-started guide](https://antewall.github.io/kvant-tools/docs/cli/getting-started) for other package managers and authentication, or the [agent skill guide](https://antewall.github.io/kvant-tools/docs/cli/skills) for more.
 
+## Nordnet TypeScript SDK — `@kvant-dev/nordnet`
+
+Use the SDK in a Node.js application to access Nordnet accounts, portfolios, and market data. It calls the web API behind nordnet.se, not Nordnet's official External API.
+
+```sh
+npm install @kvant-dev/nordnet
+```
+
+```ts
+import { NordnetClient } from '@kvant-dev/nordnet';
+
+const client = new NordnetClient();
+const results = await client.market.search('investor');
+console.log(results);
+```
+
+Search works without logging in; everything else needs a BankID session. See the [Nordnet getting-started guide](https://antewall.github.io/kvant-tools/docs/nordnet/getting-started) and [authentication guide](https://antewall.github.io/kvant-tools/docs/nordnet/authentication) for more.
+
 ## Disclaimer
 
-`@kvant-dev/avanza` and `@kvant-dev/avanza-cli` are unofficial tools for Avanza's API. They are not affiliated with Avanza Bank AB. The underlying API can be taken down or changed without warning at any point in time.
+Kvant Tools are unofficial tools for Avanza's and Nordnet's APIs. They are not affiliated with Avanza Bank AB or Nordnet Bank AB. The underlying APIs can be taken down or changed without warning at any point in time.
 
 The author of this software is not responsible for any indirect damages (foreseeable or unforeseeable), such as, if necessary, loss or alteration of or fraudulent access to data, accidental transmission of viruses or of any other harmful element, loss of profits or opportunities, the cost of replacement goods and services or the attitude and behavior of a third party.
 

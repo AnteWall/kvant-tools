@@ -12,3 +12,4 @@ out/
 .source/
 apps/docs/content/docs/cli/reference/*.md
 apps/docs/content/docs/sdk/reference/generated/
+apps/docs/content/docs/nordnet/reference/generated/

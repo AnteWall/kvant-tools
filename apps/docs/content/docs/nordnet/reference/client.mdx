@@ -1,0 +1,31 @@
+---
+title: Client and configuration
+description: Create a NordnetClient and configure its transport and session.
+---
+
+Import `NordnetClient` from `@kvant-dev/nordnet`. One instance owns its HTTP transport, active session, and domain clients.
+
+```ts
+import { NordnetClient } from '@kvant-dev/nordnet';
+
+const client = new NordnetClient({ session });
+const accounts = await client.accounts.list();
+```
+
+## Client
+
+<AutoTypeTable path="../../packages/nordnet/src/client.ts" name="NordnetClient" />
+
+## Options
+
+Pass an existing session or replace the transport when needed. The SDK uses the Node.js global `fetch`, `https://www.nordnet.se` for the web API, and `https://api.prod.nntech.io` for the cloud API by default. `locale` decides the language of names Nordnet returns, such as account types.
+
+<AutoTypeTable path="../../packages/nordnet/src/client.ts" name="NordnetClientOptions" />
+
+## Errors
+
+Every error the SDK throws extends `NordnetError`. `NordnetAuthenticationRequiredError` means the call needs a session and the client has none. `NordnetAuthenticationError` carries a `code` describing why a login or session refresh failed. `NordnetHttpError` wraps any other failed response.
+
+<AutoTypeTable path="../../packages/nordnet/src/errors.ts" name="NordnetHttpError" />
+
+See [authentication](/docs/nordnet/authentication) for restoring and validating a session. All exported response types and error classes are listed in the [complete reference](/docs/nordnet/reference/generated).

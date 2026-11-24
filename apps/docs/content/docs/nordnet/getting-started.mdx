@@ -1,0 +1,44 @@
+---
+title: Getting started
+description: Install the Nordnet SDK and make a public search request.
+---
+
+Install the package in a Node.js 22.19+ application:
+
+```sh
+pnpm add @kvant-dev/nordnet
+```
+
+Create a client and search for an instrument:
+
+```ts
+import { NordnetClient } from '@kvant-dev/nordnet';
+
+const client = new NordnetClient();
+const groups = await client.market.search('investor', 5);
+
+for (const group of groups) {
+  for (const hit of group.results) {
+    console.log(group.display_group_type, hit.display_symbol, hit.display_name);
+  }
+}
+```
+
+Search is the only call that works without logging in. Everything else, including prices, news, and all account data, needs a BankID session: see [authentication](/docs/nordnet/authentication).
+
+## Instrument ids
+
+Nordnet identifies an instrument in several ways, and different calls take different ids. A search hit carries most of them:
+
+| Id                                                | Used by                                                                         |
+| ------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `instrument_id` (number)                          | `market.prices()`, `instruments.get()`                                          |
+| `nnx_instrument_id`                               | `market.news()`, `market.companyEvents()`, and other company data               |
+| `market_data_order_book_id`                       | `market.series()`, `market.lastDay()`, `market.ratings()`, `market.dividends()` |
+| Tradable id, `market_id:identifier` (`11:INVE B`) | `market.depth()`, `market.trades()`                                             |
+
+`instruments.get()` returns all of them for an instrument.
+
+## Account ids
+
+Accounts also have two ids, both returned by `accounts.list()`. Older calls such as `accounts.info()` take the integer `accid`. Newer calls such as `positions.list()`, `performance.graph()`, and `transactions.page()` take the UUID `account_id`.

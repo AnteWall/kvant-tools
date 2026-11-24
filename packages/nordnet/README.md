@@ -3,6 +3,8 @@
 Unofficial, ESM-first TypeScript SDK for the web API behind nordnet.se: the same calls Nordnet's
 own web app makes, not the official External API.
 
+**Documentation:** [Getting started](https://antewall.github.io/kvant-tools/docs/nordnet/getting-started) · [Authentication](https://antewall.github.io/kvant-tools/docs/nordnet/authentication) · [API reference](https://antewall.github.io/kvant-tools/docs/nordnet/reference)
+
 ## Disclaimer
 
 This SDK is not affiliated with Nordnet Bank AB. The API is undocumented and can change or
@@ -34,16 +36,17 @@ Later: `new NordnetClient({ session })`, then `await client.auth.validateSession
 
 ## Calls
 
-| Client         | Calls                                                                                         |
-| -------------- | --------------------------------------------------------------------------------------------- |
-| `accounts`     | `list()`, `info(accids)`                                                                      |
-| `positions`    | `list(accountIds)`, `ownCapital(accountIds)`                                                  |
-| `performance`  | `graph(accountIds, range)`, `development(accountIds, period)`, `riskMetrics`, `returnsByYear` |
-| `transactions` | `page({ accountIds, fromDate, toDate, … })`                                                   |
-| `watchlists`   | `list()`, `get(id)`                                                                           |
-| `alerts`       | `priceAlarms()`                                                                               |
-| `orders`       | `list()`, `trades()`                                                                          |
-| `instruments`  | `get(ids)`, `byIsin(isin, currency, marketId)`                                                |
+| Client         | Calls                                                                                              |
+| -------------- | -------------------------------------------------------------------------------------------------- |
+| `accounts`     | `list()`, `info(accids)`                                                                           |
+| `positions`    | `list(accountIds)`, `ownCapital(accountIds)`                                                       |
+| `performance`  | `graph(accountIds, range)`, `development(accountIds, period)`, `riskMetrics`, `returnsByYear`      |
+| `transactions` | `page({ accountIds, fromDate, toDate, … })`                                                        |
+| `watchlists`   | `list()`, `get(id)`                                                                                |
+| `alerts`       | `priceAlarms()`                                                                                    |
+| `orders`       | `list()`, `trades()`                                                                               |
+| `instruments`  | `get(ids)`, `byIsin(isin, currency, marketId)`                                                     |
+| `market`       | `search(query)`, `prices(ids)`, `series(id, period)`, `news(id)`, `dividends(id)`, company data, … |
 
 Legacy calls take an account's integer `accid`; cloud calls take its UUID `account_id`. Both
 come from `accounts.list()`.

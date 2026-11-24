@@ -1,0 +1,59 @@
+---
+title: Authentication and sessions
+description: Log in with BankID, then store, restore, and validate a Nordnet session.
+---
+
+The Nordnet SDK logs in with Swedish BankID by QR code. There is no TOTP or password login.
+
+## BankID login
+
+Start an attempt, show its QR code, and poll until it completes. The QR payload changes on every poll, so render it again each time.
+
+```ts
+import { NordnetClient } from '@kvant-dev/nordnet';
+
+const client = new NordnetClient();
+const attempt = await client.auth.startBankId();
+
+for (;;) {
+  renderQrCode(attempt.challenge.qrPayload);
+  await new Promise((resolve) => setTimeout(resolve, attempt.challenge.refreshAfterMs));
+
+  const result = await attempt.poll();
+  if (result.status === 'pending') continue;
+  if (result.status !== 'complete') throw new Error(`BankID login ${result.status}`);
+
+  await saveSession(result.session);
+  break;
+}
+```
+
+`poll()` resolves to `pending`, `complete` (with the session), `denied`, or `expired`. Call `attempt.cancel()` to stop an attempt; it only stops the client, and the BankID order then expires on its own. `renderQrCode` and `saveSession` stand for your own code.
+
+## How sessions work
+
+Nordnet's web API sits on two hosts:
+
+- `www.nordnet.se` authenticates with session cookies.
+- `api.prod.nntech.io` takes short-lived bearer tokens. The client mints them from the cookie session when it needs them.
+
+A `NordnetSession` is just those cookies, plus your customer id. Nordnet refreshes the cookies as you make calls, so **save `client.session` again after calls**, not only after login.
+
+## Restoring a session
+
+```ts
+import { NordnetClient } from '@kvant-dev/nordnet';
+
+const client = new NordnetClient({ session: await loadSession() });
+
+if (await client.auth.validateSession()) {
+  const accounts = await client.accounts.list();
+  await saveSession(client.session);
+}
+```
+
+You can also replace a session with `client.setSession(session)`, clear it locally with `client.clearSession()`, or call `client.auth.logout()` to log out on Nordnet's side as well.
+
+Calls that need a login fail with `NordnetAuthenticationRequiredError` before making a network request when the client has no session. Nordnet decides when a session expires, so validate a restored session before using it.
+
+The session is sensitive: anyone holding its cookies can read your account. Store it as you would a password.

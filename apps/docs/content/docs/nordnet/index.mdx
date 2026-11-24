@@ -1,0 +1,24 @@
+---
+title: '@kvant-dev/nordnet SDK'
+description: TypeScript SDK for Nordnet applications.
+---
+
+`@kvant-dev/nordnet` is an ESM-first TypeScript SDK for the web API behind nordnet.se: the same calls Nordnet's own web app makes, not Nordnet's official External API. It owns the HTTP transport and an in-memory session; your application decides how to store the session and present results.
+
+Start with [installation and your first request](/docs/nordnet/getting-started), then read [BankID login and sessions](/docs/nordnet/authentication). Browse the [public API](/docs/nordnet/reference) and its [generated signatures](/docs/nordnet/reference/generated).
+
+## Status
+
+The SDK is new and covers read-only calls: accounts, positions, performance, transactions, orders, watchlists, price alarms, instruments, and market data. There is no CLI for Nordnet yet.
+
+Some response types are not yet verified against a recorded response: the item shapes of positions, transactions, orders, trades, price alarms, and a watchlist's contents. Their types come from nordnet.se's frontend code, so expect them to change as they are confirmed.
+
+## For AI agents
+
+Use the [documentation index](https://antewall.github.io/kvant-tools/llms.txt) to find individual Markdown pages, or [read all docs as Markdown](https://antewall.github.io/kvant-tools/llms-full.txt). You can also copy or view the Markdown from any page using the controls above.
+
+## Disclaimer
+
+This is an unofficial TypeScript SDK for Nordnet's web API. It is not affiliated with Nordnet Bank AB. The API is undocumented and can be taken down or changed without warning at any point in time.
+
+The author of this software is not responsible for any indirect damages (foreseeable or unforeseeable), such as, if necessary, loss or alteration of or fraudulent access to data, accidental transmission of viruses or of any other harmful element, loss of profits or opportunities, the cost of replacement goods and services or the attitude and behavior of a third party.

@@ -1,0 +1,6 @@
+{
+  "title": "@kvant-dev/nordnet SDK",
+  "description": "Nordnet TypeScript SDK documentation",
+  "root": true,
+  "pages": ["index", "getting-started", "authentication", "reference"]
+}
