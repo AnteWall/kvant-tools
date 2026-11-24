@@ -70,16 +70,21 @@ export interface NordnetLastDayReturn {
   readonly lastPrice: number;
 }
 
+/**
+ * One search result. Instrument fields (`instrument_id`, `display_symbol`, `currency`, …) are
+ * missing on non-instrument hits: the `SITE`, `BLOG`, `SHAREVILLE_PROFILES`,
+ * `SHAREVILLE_GROUPS` and `CURATED_LISTS` groups.
+ */
 export interface NordnetSearchHit {
   readonly close_price?: { readonly decimals: number; readonly price: number };
-  readonly currency: string;
+  readonly currency?: string;
   readonly diff_pct_one_day?: number;
   readonly display_name: string;
-  readonly display_symbol: string;
+  readonly display_symbol?: string;
   readonly exchange_country?: string;
-  readonly instrument_group_type: string;
-  readonly instrument_id: number;
-  readonly instrument_type: string;
+  readonly instrument_group_type?: string;
+  readonly instrument_id?: number;
+  readonly instrument_type?: string;
   readonly last_price?: { readonly decimals: number; readonly price: number };
   readonly market_data_order_book_id?: string;
   readonly market_info?: { readonly identifier: string; readonly market_id: number };

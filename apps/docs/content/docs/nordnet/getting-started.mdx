@@ -19,6 +19,8 @@ const groups = await client.market.search('investor', 5);
 
 for (const group of groups) {
   for (const hit of group.results) {
+    // Groups such as BLOG and SITE return pages, not instruments.
+    if (hit.instrument_id === undefined) continue;
     console.log(group.display_group_type, hit.display_symbol, hit.display_name);
   }
 }
