@@ -1,4 +1,4 @@
-# nordnet-ts
+# @kvant-dev/nordnet
 
 Unofficial, ESM-first TypeScript SDK for the web API behind nordnet.se: the same calls Nordnet's
 own web app makes, not the official External API.
@@ -15,7 +15,7 @@ session cookies. `api.prod.nntech.io` takes short-lived bearer tokens that the c
 that session. A `NordnetSession` is just those cookies, so persist `client.session` after calls.
 
 ```ts
-import { NordnetClient } from 'nordnet-ts';
+import { NordnetClient } from '@kvant-dev/nordnet';
 
 const client = new NordnetClient();
 const attempt = await client.auth.startBankId();

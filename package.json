@@ -13,7 +13,7 @@
     "lint": "oxlint . --deny-warnings",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest --passWithNoTests",
-    "typecheck": "tsc --build && pnpm --filter @kvant/docs typecheck",
+    "typecheck": "tsc --build && pnpm --filter @kvant-dev/docs typecheck",
     "version-packages": "changeset version && pnpm install --lockfile-only"
   },
   "devDependencies": {

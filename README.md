@@ -5,7 +5,7 @@
 >
 > <a href="https://github.com/AnteWall/avanza-desk"><img src="https://raw.githubusercontent.com/AnteWall/avanza-desk/HEAD/docs/screenshots/workspace.png" width="480" alt="Avanza Desk workspace" /></a>
 
-Unofficial TypeScript SDKs and command-line tools for Nordic brokers: Avanza (`avanza-ts`, `avanza-tools`) and Nordnet (`nordnet-ts`).
+Unofficial TypeScript SDKs and command-line tools for Nordic brokers: Avanza (`avanza-ts`, `avanza-tools`) and Nordnet (`@kvant-dev/nordnet`).
 
 **Documentation:** [SDK guide](https://antewall.github.io/kvant-tools/docs/sdk/) · [CLI guide](https://antewall.github.io/kvant-tools/docs/cli/) · [Full documentation](https://antewall.github.io/kvant-tools/)
 
@@ -75,6 +75,6 @@ Run `pnpm dev` to watch both TypeScript packages. Use `pnpm changeset` to descri
 
 The SDK and CLI have independent versions and GitHub Releases. Add a changeset for each publishable change and merge it into `main`. The [version workflow](.github/workflows/version.yml) pushes version and changelog commits to a **Version Packages** PR; merge that PR to start the [release workflow](.github/workflows/release.yml). It checks, builds, and publishes changed packages to npm, then creates `avanza-ts@<version>` and/or `avanza-tools@<version>` GitHub Releases with their changelog entries. A CLI release waits for the SDK if both versions change together. Rerun **Release packages** manually on `main` to retry a partial release; published npm versions and existing GitHub Releases are skipped.
 
-Run `pnpm --filter @kvant/docs dev` to work on the documentation locally. The docs build generates CLI topic pages from oclif help before exporting the static site. GitHub Pages deployment runs from `.github/workflows/docs.yml` (select **GitHub Actions** as the repository's Pages source).
+Run `pnpm --filter @kvant-dev/docs dev` to work on the documentation locally. The docs build generates CLI topic pages from oclif help before exporting the static site. GitHub Pages deployment runs from `.github/workflows/docs.yml` (select **GitHub Actions** as the repository's Pages source).
 
-The docs build also generates the [SDK API reference](https://antewall.github.io/kvant-tools/docs/sdk/reference/generated/) from the `avanza-ts` public entry point using TypeDoc. Run `pnpm --filter @kvant/docs generate:sdk` to refresh it locally.
+The docs build also generates the [SDK API reference](https://antewall.github.io/kvant-tools/docs/sdk/reference/generated/) from the `avanza-ts` public entry point using TypeDoc. Run `pnpm --filter @kvant-dev/docs generate:sdk` to refresh it locally.
